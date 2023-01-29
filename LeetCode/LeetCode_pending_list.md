@@ -5,5 +5,7 @@
 <a href="https://leetcode.com/problems/data-stream-as-disjoint-intervals/">352. Data Stream as Disjoint Intervals (DC :28-01-23)
 </a>
 
+<a href="https://leetcode.com/problems/lfu-cache/">460. LFU Cache</a>
+
 # GFG :
 <a href="https://practice.geeksforgeeks.org/problems/scrambled-string/1">GFG POTD :28-01-23 :Scrambled String</a>
