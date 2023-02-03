@@ -9,6 +9,8 @@
 
 <a href="https://leetcode.com/problems/best-team-with-no-conflicts/">1626. Best Team With No Conflicts</a>
 
+<a href="https://leetcode.com/problems/zigzag-conversion/">6. Zigzag Conversion</a>
+
 # GFG :
 <a href="https://practice.geeksforgeeks.org/problems/scrambled-string/1">POTD :28-01-23 :Scrambled String</a>
 
