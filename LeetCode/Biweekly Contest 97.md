@@ -65,4 +65,6 @@ public:
 
 ## <a href="https://leetcode.com/contest/biweekly-contest-97/problems/maximize-win-from-two-segments/">6331. Maximize Win From Two Segments</a>
 
+### upsolve pending
 ## <a href="https://leetcode.com/contest/biweekly-contest-97/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/">6305. Disconnect Path in a Binary Matrix by at Most One Flip</a>
+### upsolve pending
