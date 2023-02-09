@@ -13,6 +13,8 @@
 
 <a href="https://leetcode.com/problems/fruit-into-baskets/">904. Fruit Into Baskets</a>
 
+<a href="https://leetcode.com/problems/naming-a-company/">2306. Naming a Company</a>
+
 # GFG :
 <a href="https://practice.geeksforgeeks.org/problems/scrambled-string/1">28-01-23 :Scrambled String</a>
 
