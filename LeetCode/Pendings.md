@@ -15,9 +15,14 @@
 
 <a href="https://leetcode.com/problems/naming-a-company/">2306. Naming a Company</a>
 
+------------------------------------------------------------------
 # GFG :
 <a href="https://practice.geeksforgeeks.org/problems/scrambled-string/1">28-01-23 :Scrambled String</a>
 
 <a href="https://practice.geeksforgeeks.org/problems/51afa710a708c0681748445b509696dd588d5c40/1">02-02-23 :Largest Sum Cycle</a>
 
 <a href="https://practice.geeksforgeeks.org/problems/4dfa8ba14d4c94f4d7637b6b5246782412f3aeb8/1">7-2-23 :Length of the longest subarray with positive product</a>
+
+<a href="https://practice.geeksforgeeks.org/problems/f4d22b1f9d62e8bee0ff84e9fa51dc66eb5005ec/1">11-2-23 :Minimum Days</a>
+
+<a href="https://practice.geeksforgeeks.org/problems/e9e2da3de3eb35679ca7e17b752ae877635f1a26/1">Count Lucky Permutations</a>
