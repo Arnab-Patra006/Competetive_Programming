@@ -1,6 +1,6 @@
 # <a href="https://codeforces.com/contest/208/problem/A">A. Dubstep</a>
 
-## Approach 1 : C++ | Brute Force | Strings
+## Approach 1 : C++ | Brute Force | Strings | 900 | Easy
 ```
 #include<bits/stdc++.h>
 using namespace std;
