@@ -1,4 +1,4 @@
-# <a href="">B. MKnez's ConstructiveForces Task</a>
+# <a href="">B. MKnez's ConstructiveForces Task | 900 </a>
 
 ## Approach : Puzzle 
 - only 1,3 are not eligible for.
