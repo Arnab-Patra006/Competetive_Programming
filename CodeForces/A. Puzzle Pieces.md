@@ -1,12 +1,12 @@
 # <a href="https://codeforces.com/problemset/problem/1345/A">1345.A. Puzzle Pieces</a>
 
-### Approach :
+### Approach : O(1)
 + if there is single row or column any no of pices can be added no problem. first two if states that.
 + second condition is that if none of the row or column is one then only one possibility is there that is when they are 2,2.
 + everything else is impossible to make a puzzle.
 
 As the image shows you can imagine :
- 
+
 <img src="img/1345A.png" width="500px">
 
 ```
