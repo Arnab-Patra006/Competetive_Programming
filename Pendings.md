@@ -30,3 +30,5 @@
 <a href="https://practice.geeksforgeeks.org/problems/f4d22b1f9d62e8bee0ff84e9fa51dc66eb5005ec/1">11-2-23 :Minimum Days</a>
 
 <a href="https://practice.geeksforgeeks.org/problems/e9e2da3de3eb35679ca7e17b752ae877635f1a26/1">Count Lucky Permutations</a>
+
+<a href="https://practice.geeksforgeeks.org/problems/aa0000a5f710ce8d41366b714341eef644ec7b82/1">Count Cyclic Paths</a>
