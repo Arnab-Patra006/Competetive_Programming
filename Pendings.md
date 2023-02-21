@@ -32,3 +32,5 @@
 <a href="https://practice.geeksforgeeks.org/problems/e9e2da3de3eb35679ca7e17b752ae877635f1a26/1">Count Lucky Permutations</a>
 
 <a href="https://practice.geeksforgeeks.org/problems/aa0000a5f710ce8d41366b714341eef644ec7b82/1">Count Cyclic Paths</a>
+
+<a href="https://practice.geeksforgeeks.org/problems/51b266505221b97522b1d2c86ddad1868a54831b/1">Walls Coloring</a>
