@@ -18,6 +18,7 @@
 <a href="https://leetcode.com/problems/count-the-number-of-fair-pairs/">1865. Finding Pairs With a Certain Sum</a>
 
 <a href="https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/">2477. Minimum Fuel Cost to Report to the Capital</a>
+<a href="https://leetcode.com/problems/minimize-deviation-in-array/">1675. Minimize Deviation in Array</a>
 
 ------------------------------------------------------------------
 # GFG :
@@ -34,3 +35,4 @@
 <a href="https://practice.geeksforgeeks.org/problems/aa0000a5f710ce8d41366b714341eef644ec7b82/1">Count Cyclic Paths</a>
 
 <a href="https://practice.geeksforgeeks.org/problems/51b266505221b97522b1d2c86ddad1868a54831b/1">Walls Coloring</a>
+<a href="https://practice.geeksforgeeks.org/problems/e7d81a082cda6bd1e959d943197aa3bc21b88bdb/1">Shortest Path Using Atmost One Curved Edge</a>
