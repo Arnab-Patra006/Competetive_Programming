@@ -1,0 +1,18 @@
+ #search-gif,#search-btn{
+    padding:15px;
+    margin:5px;
+    text-align: center;
+ }
+ 
+ #search{
+    width: fit-content;
+    padding:20px;
+ }
+ 
+ #gif-box{
+    text-align: center;
+} 
+
+#bdy{
+    background-color: gainsboro;
+}
