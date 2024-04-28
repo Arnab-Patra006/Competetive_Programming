@@ -45,7 +45,7 @@ int main()
 }
 ```
 
-2. 1901 A. Line Trip
+# 2. 1901 A. Line Trip
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -83,7 +83,7 @@ int main()
 }
 ```
 
-3. 1900 A. Cover in Water
+# 3. 1900 A. Cover in Water
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -132,7 +132,7 @@ int main()
 }
 ```
 
-4. 1899.A. Game with Integers
+# 4. 1899.A. Game with Integers
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -168,7 +168,7 @@ int main()
 }
 ```
 
-5. 1896.A. Jagged Swaps
+# 5. 1896.A. Jagged Swaps
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -209,7 +209,7 @@ int main()
 }
 ```
 
-6. 1890.A.A. Doremy's Paint 3
+# 6. 1890. A.Doremy's Paint 3
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -276,7 +276,7 @@ int main()
 }
 ```
 
-7. 1881. A. Don't Try to Count
+# 7. 1881. A. Don't Try to Count
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -335,7 +335,7 @@ int main()
 }
 ```
 
-8. 1878.A. How Much Does Daytona Cost?
+# 8. 1878.A. How Much Does Daytona Cost?
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -371,7 +371,7 @@ int main()
     return 0;
 }
 ```
-9. 1877.A. Goals of Victory
+# 9. 1877.A. Goals of Victory
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -406,7 +406,7 @@ int main()
 }
 ```
 
-10. 1873.C. Target Practice
+# 10. 1873.C. Target Practice
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -488,7 +488,7 @@ int main()
 }
 ```
 
-11. 1866.A. Ambitious Kid
+# 11. 1866.A. Ambitious Kid
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -527,7 +527,7 @@ int main()
 }
 ```
 
-12. 1862.B. Sequence Game
+# 12. 1862.B. Sequence Game
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -582,7 +582,7 @@ int main()
 }
 ```
 
-13. 1859.A. United We Stand
+# 13. 1859.A. United We Stand
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -650,7 +650,7 @@ int main()
 }
 ```
 
-14. 1858.A. Buttons
+# 14. 1858.A. Buttons
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -689,7 +689,7 @@ int main()
 }
 ```
 
-15. 1875.A. Array Coloring
+# 15. 1875.A. Array Coloring
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -731,7 +731,7 @@ int main()
 }
 ```
 
-16. 1853.A. Desorting
+# 16. 1853.A. Desorting
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -787,7 +787,7 @@ int main()
 }
 ```
 
-17. 1854.A. Forbidden Integer
+# 17. 1854.A. Forbidden Integer
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -885,7 +885,7 @@ int main()
 }
 ```
 
-18. 1873.A. Grasshopper on a Line
+# 18. 1873.A. Grasshopper on a Line
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -924,7 +924,7 @@ int main()
 }
 ```
 
-19. 1834.A. Unit Array
+# 19. 1834.A. Unit Array
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -977,7 +977,7 @@ int main()
 }
 ```
 
-20. 1831.A. Twin Permutations
+# 20. 1831.A. Twin Permutations
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1016,7 +1016,7 @@ int main()
 }
 ```
 
-21. 1829.B. Blank Space
+# 21. 1829.B. Blank Space
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1062,7 +1062,7 @@ int main()
 }
 ```
 
-22. A. Coins
+# 22. A. Coins
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1115,7 +1115,7 @@ int main()
 }
 ```
 
-23. 1806.A. Walking Master
+# 23. 1806.A. Walking Master
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1157,7 +1157,7 @@ int main()
 }
 ```
 
-24. 1805.A. We Need the Zero
+# 24. 1805.A. We Need the Zero
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1229,7 +1229,7 @@ int main()
  
 ```
 
-25. 1791. C. Prepend and Append
+# 25. 1791. C. Prepend and Append
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1266,7 +1266,7 @@ int main()
 }
 ```
 
-26. 1789.A. Serval and Mocha's Array
+# 26. 1789.A. Serval and Mocha's Array
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1318,7 +1318,7 @@ int main()
 }
 ```
 
-27. 1788.A. One and Two
+# 27. 1788.A. One and Two
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1380,7 +1380,7 @@ int main()
 }
 ```
 
-28. 1783.A. Make it Beautiful
+# 28. 1783.A. Make it Beautiful
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1429,7 +1429,7 @@ int main()
 }
 ```
 
-29. 1777.A. Everybody Likes Good Arrays!
+# 29. 1777.A. Everybody Likes Good Arrays!
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1476,7 +1476,7 @@ int main()
 }
 ```
 
-30. 1766.A. Extremely Round
+# 30. 1766.A. Extremely Round
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -1525,7 +1525,7 @@ int main()
 }
 ```
 
-31. 1761.A. Two Permutations
+# 31. 1761.A. Two Permutations
 ```
 #include<bits/stdc++.h>
 using namespace std;
