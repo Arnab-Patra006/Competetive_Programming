@@ -201,7 +201,7 @@ int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
   }
   for (int i = 1; i < n + 1; i++)
   {
-    for (int j = 1; j < Weight; j++)
+    for (int j = 1; j < Weight+1; j++)
     {
       if (weight[i - 1] <= j)
       {
