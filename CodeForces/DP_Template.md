@@ -182,7 +182,7 @@ int minSubsetSumDifference(vector<int>arr)
 }
 ``` 
 
-## 6. Unbounded KnapSack (Not working)
+## 6. Unbounded KnapSack (Working)
 . We can consider any elements any number of times.(Rod Cutting problem,Coin exchange problem).
 ```
 int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
