@@ -1,4 +1,10 @@
 # My DP Templates
+
+```
+vector<vector<long long int>> dp(n+1,vector<long long int>(sum+1));
+is Faster than 
+
+```
 ## 1. Bounded Knapsack OR 0/1 Knapsace
 Returns max Profit,we can make from certain elements(weight[] and value[])till weight of considered elements don't exceed Weight.
 ```
@@ -92,14 +98,30 @@ bool equalSumPartation(vector<int> arr)
 }
 ``` 
 
-## 4. Target Sum/Perfect Sum Problem (Not working)
+## 4. Target Sum/Perfect Sum Problem (working)
 Count of subsets of having a particuler sum.
 ```
-	int MOD=1e9+7;
-	int targetSum(vector<int> arr, int target)
+Input: arr[] = {1, 2, 3, 3}, X = 6 
+Output: 3 
+All the possible subsets are {1, 2, 3}, 
+{1, 2, 3} and {3, 3}
+```
+
+```
+int targetSum(vector<int> arr, int target)
 {
   int n = arr.size();
-  int dp[n + 1][target + 1];
+  //int dp[n + 1][target + 1];
+  vector<vector<int>> dp(n+1,vector<int>(target+1));//Better Declaration
+  int totalSum = 0;
+  for (int i = 0; i < n; i++)
+  {
+    totalSum += arr[i];
+  }
+  if (target > totalSum)
+  {
+    return 0;
+  }
   for (int i = 0; i < n + 1; i++)
   {
     for (int j = 0; j < target + 1; j++)
@@ -114,16 +136,17 @@ Count of subsets of having a particuler sum.
       }
     }
   }
-  for(int i=1;i<n+1;i++)
+  for (int i = 1; i < n + 1; i++)
   {
-    for(int j=1;j<target+1;j++)
+    for (int j = 0; j < target + 1; j++)
     {
-      if(arr[i-1]<=j)
+      if (arr[i - 1] <= j)
       {
-        dp[i][j]=(dp[i-1][j-arr[i-1]]+dp[i-1][j])%MOD;
+        dp[i][j] = (dp[i - 1][j - arr[i - 1]] % MOD + dp[i - 1][j] % MOD) % MOD;
       }
-      else{
-        dp[i][j]=dp[i-1][j]%MOD;
+      else
+      {
+        dp[i][j] = dp[i - 1][j] % MOD;
       }
     }
   }
@@ -182,8 +205,40 @@ int minSubsetSumDifference(vector<int>arr)
   return abs(rightSum-leftSum);
 }
 ``` 
+## 6. Count Of Partitions with Given Difference :
+'Array' and 'diff' given.How many ways we can make 2 subsets whose sum difference is 'diff'.
+Input: N = 5, arr[] = [1, 2, 3, 1, 2], diff = 1
+Output: 5
+Explanation: We can have five partitions which is shown below
+{1, 3, 1} and {2, 2} – S1 = 5, S2 = 4
+{1, 2, 2} and {1, 3} – S1 = 5, S2 = 4
+{3, 2} and {1, 1, 2} – S1 = 5, S2 = 4
+{1, 2, 2} and {1, 3} – S1 = 5, S2 = 4
+{3, 2} and {1, 1, 2} – S1 = 5, S2 = 4
+Approach :
+rightSum=totalSum-leftSum
+rightSum=leftSum-diff
+leftSum=(diff+totalSum)/2
+so we will basically calculate no of subsets to get leftSum.
+```
+int countPartitions(int n, int d, vector<int> &arr)
+{
+  int totalSum = 0;
+  for (int i = 0; i < n; i++)
+  {
+    totalSum = (totalSum + arr[i]) % MOD;
+  }
+  if ((totalSum + d) % 2 != 0 || totalSum < d)
+    return 0;
+  int sum1 = (totalSum + d) / 2;
+  sum1 = min(sum1, totalSum - sum1);
+  int target = sum1;
+  return targetSum(arr, target);
+}
+```
 
-## 6. Unbounded KnapSack (Working)
+
+## 7. Unbounded KnapSack (Working)
 . We can consider any elements any number of times.(Rod Cutting problem,Coin exchange problem).
 ```
 int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)

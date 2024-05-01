@@ -123,52 +123,54 @@ bool equalSumPartation(vector<int> arr)
 // }
 
 // 5. MIN SUBSET SUM DIFFERENCE : minimum difference of sum of all elements of the two subsets
-int minSubsetSumDifference(vector<int>arr)
+int minSubsetSumDifference(vector<int> arr)
 {
-  int n=arr.size();
-  int totalSum=0;
-  for(int i=0;i<n;i++)
+  int n = arr.size();
+  int totalSum = 0;
+  for (int i = 0; i < n; i++)
   {
-    totalSum+=arr[i];
+    totalSum += arr[i];
   }
-  bool dp[n+1][totalSum+1];
-  for(int i=0;i<n+1;i++)
+  bool dp[n + 1][totalSum + 1];
+  for (int i = 0; i < n + 1; i++)
   {
-    for(int j=0;j<totalSum+1;j++)
+    for (int j = 0; j < totalSum + 1; j++)
     {
-      if(i==0)
+      if (i == 0)
       {
-        dp[i][j]=false;
+        dp[i][j] = false;
       }
-      if(j==0)
+      if (j == 0)
       {
-        dp[i][j]=true;
+        dp[i][j] = true;
       }
     }
   }
-  for(int i=1;i<n+1;i++){
-    for(int j=1;j<totalSum+1;j++)
-    {
-      if(arr[i-1]<=j)
-      {
-        dp[i][j]=dp[i-1][j-arr[i-1]]||dp[i-1][j];
-      }
-      else{
-        dp[i][j]=dp[i-1][j];
-      }
-    }
-  }
-  int sum=totalSum/2;
-  int leftSum=INT_MIN;
-  for(int j=0;j<=sum;j++)
+  for (int i = 1; i < n + 1; i++)
   {
-    if(dp[n][j]==true)
+    for (int j = 1; j < totalSum + 1; j++)
     {
-      leftSum=max(leftSum,j);
+      if (arr[i - 1] <= j)
+      {
+        dp[i][j] = dp[i - 1][j - arr[i - 1]] || dp[i - 1][j];
+      }
+      else
+      {
+        dp[i][j] = dp[i - 1][j];
+      }
     }
   }
-  int rightSum=totalSum-leftSum;
-  return abs(rightSum-leftSum);
+  int sum = totalSum / 2;
+  int leftSum = INT_MIN;
+  for (int j = 0; j <= sum; j++)
+  {
+    if (dp[n][j] == true)
+    {
+      leftSum = max(leftSum, j);
+    }
+  }
+  int rightSum = totalSum - leftSum;
+  return abs(rightSum - leftSum);
 }
 
 // 6. UNBOUNDED KNAPSACK : We can consider any elements any number of times.(Rod Cutting problem,Coin exchange problem) [not working]
@@ -206,7 +208,6 @@ int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
 // 7. COUNT SUBSET SUM WITH GIVEN DIFFERENCE :
 int countSubsetSumWithGivenDiff()
 {
-  
 }
 
 int main()
@@ -223,3 +224,4 @@ int main()
   cout << minSubsetSumDifference(v);
   return 0;
 }
+
