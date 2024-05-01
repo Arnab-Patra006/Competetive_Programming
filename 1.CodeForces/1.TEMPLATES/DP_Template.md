@@ -275,15 +275,47 @@ int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
   return dp[n][Weight];
 }
 ```
-### [i.Rod Cutting (gfg)](https://www.geeksforgeeks.org/problems/rod-cutting0840/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article)[solved]
+### [i.Rod Cutting (gfg)](https://www.geeksforgeeks.org/problems/rod-cutting0840/1)[solved]
 
-### [ii.Coin Exchange-1]()
+### [ii.Coin Exchange-1 (gfg)](https://www.geeksforgeeks.org/problems/coin-change2448/1)[solved]
+```
+. Tip1- When only 1 array given it has to be wt[].
+. Tip2- It's a mix of Unkbounded KP and Perfect Sum Problem.Bcz supply in unlimited & want no of ways
+```
 
-### [ii.Coin Exchange-2]()
+### [ii.Coin Exchange-2](https://www.geeksforgeeks.org/problems/number-of-coins1824/1)
 
 ## 9. Longest Common Subsequence (LCS) :
 ```
+int LCS(string s1, int n, string s2, int m)
+{
+  vector<vector<int>> dp(n + 1, vector<int>(m + 1));
+  for (int i = 0; i < n + 1; i++)
+  {
+    for (int j = 0; j < m + 1; j++)
+    {
+      dp[i][j] = 0;
+    }
+  }
+  for (int i = 1; i < n + 1; i++)
+  {
+    for (int j = 1; j < m + 1; j++)
+    {
+      if (s1[i - 1] == s2[j - 1])
+      {
+        dp[i][j] = 1 + dp[i - 1][j - 1];
+      }
+      else
+      {
+        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+      }
+    }
+  }
+  return dp[n][m];
+}
 ```
+### [LCS (gfg)](https://www.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1) [solved]
+
 ## 10. Printing LCS :
 ```
 ```
