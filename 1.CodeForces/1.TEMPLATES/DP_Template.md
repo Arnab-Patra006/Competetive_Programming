@@ -98,7 +98,7 @@ bool equalSumPartation(vector<int> arr)
 }
 ``` 
 
-## 4. Target Sum/Perfect Sum Problem (working)
+## 4. Perfect Sum Problem (working)
 Count of subsets of having a particuler sum.
 ```
 Input: arr[] = {1, 2, 3, 3}, X = 6 
@@ -108,7 +108,7 @@ All the possible subsets are {1, 2, 3},
 ```
 
 ```
-int targetSum(vector<int> arr, int target)
+int perfectSum(vector<int> arr, int target)
 {
   int n = arr.size();
   //int dp[n + 1][target + 1];
@@ -233,18 +233,21 @@ int countPartitions(int n, int d, vector<int> &arr)
   int sum1 = (totalSum + d) / 2;
   sum1 = min(sum1, totalSum - sum1);
   int target = sum1;
-  return targetSum(arr, target);
+  return perfectSum(arr, target);
 }
+```
+## 7. Target Sum 
+```
 ```
 
 
-## 7. Unbounded KnapSack (Working)
+## 8. Unbounded KnapSack (Working)
 . We can consider any elements any number of times.(Rod Cutting problem,Coin exchange problem).
 ```
 int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
 {
   int n = weight.size();
-  int dp[n + 1][Weight + 1];
+  vector<vector<int>>dp(n+1,vector<int>(Weight+1));
   for (int i = 0; i < n + 1; i++)
   {
     for (int j = 0; j < Weight + 1; j++)
@@ -271,4 +274,42 @@ int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
   }
   return dp[n][Weight];
 }
+```
+### [i.Rod Cutting (gfg)](https://www.geeksforgeeks.org/problems/rod-cutting0840/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article)[solved]
+
+### [ii.Coin Exchange-1]()
+
+### [ii.Coin Exchange-2]()
+
+## 9. Longest Common Subsequence (LCS) :
+```
+```
+## 10. Printing LCS :
+```
+```
+## 11. Longest Common SubString :
+```
+```
+## 12. Shortest Common SuperSequence
+```
+```
+## 13. Minimum Number of Insertion and Deletion to convert  String A to String B :
+```
+```
+## 14. Longest Palindromic Subsequence :
+```
+```
+## 15. Printing Shortest Common SuperSequence :
+```
+```
+## 16. Longest Repeating Subsequence : (LCS)
+```
+```
+## 17. Sequence Pattern Matching :
+```
+```
+
+
+## 18. Matrix Chain Multiplication ;
+```
 ```
