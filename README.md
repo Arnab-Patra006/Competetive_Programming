@@ -1,4 +1,4 @@
-# Code_With_Pie
+# Competetive Programming
 ## Here in this Repository i will Contribute my Code with explainations,Notes,LeetCode Daily Challenges,Geeks For Geeks Problem Of the Day,LeetCode weekly & Biweekly Contest's upsolved solutions along with these problem's links.
 ----------------------------------------------------------------
 
