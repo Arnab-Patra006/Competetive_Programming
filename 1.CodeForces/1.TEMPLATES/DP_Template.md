@@ -287,8 +287,10 @@ int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
 
 ## 9. Longest Common Subsequence (LCS) :
 ```
-int LCS(string s1, int n, string s2, int m)
+int LCS(string s1,string s2)
 {
+  int n=s1.size();
+  int m=s2.size();
   vector<vector<int>> dp(n + 1, vector<int>(m + 1));
   for (int i = 0; i < n + 1; i++)
   {
