@@ -7,6 +7,8 @@ So better to put 0 after that and then smaller nos till 1.
 ```
 ## MEX and XOR :
 ```
-- MEX :(Minimum EXcluded) of an array is the minimum non-negative integer that does not belong to the array.
+- MEX :(Minimum EXcluded) of an array is the minimum non-negative integer that does not belong to the array.the shortest array with MEX a
+ is the array [0,1,…,a−1], which has length a.
+
 - XOR :if (A XOR B)=C => B=(A XOR C)
 ```
