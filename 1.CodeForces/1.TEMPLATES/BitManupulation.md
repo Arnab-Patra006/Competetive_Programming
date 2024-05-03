@@ -5,3 +5,8 @@ is the highest set bit in n-1.So any number greater than 2^k will have smaller v
 This way we can reduce them from n-1 to 2^k but after that when ever I do XOR of 2^k to any smaller that it will make bigger result but not 0.
 So better to put 0 after that and then smaller nos till 1.  
 ```
+## MEX and XOR :
+```
+MEX :(Minimum EXcluded) of an array is the minimum non-negative integer that does not belong to the array.
+if (A XOR B)=C => B=(A XOR C)
+```
