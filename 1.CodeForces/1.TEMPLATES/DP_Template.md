@@ -317,7 +317,7 @@ int LCS(string s1,string s2)
 ```
 ### [LCS (gfg)](https://www.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1) [solved]
 
-## 10. Printing LCS :
+## 10. Printing LCS :(Parent LCS)
 ```
 string LCSPrint(string s1, string s2)
 {
@@ -372,7 +372,7 @@ string LCSPrint(string s1, string s2)
   return ans;
 }
 ```
-## 11. [Longest Common SubString](https://www.geeksforgeeks.org/problems/longest-common-substring1452/1) :(solved)
+## 11. [Longest Common SubString](https://www.geeksforgeeks.org/problems/longest-common-substring1452/1) :(Parent LCS)(solved) 
 ```
 int LCSS(string s1, string s2) {
   int n = s1.size();
@@ -399,13 +399,13 @@ int LCSS(string s1, string s2) {
   return mx;
 }
 ```
-## 12. Shortest Common SuperSequence
+## 12. Shortest Common SuperSequence (Parent LCS)
 ```
 ```
-## 13. Minimum Number of Insertion and Deletion to convert  String A to String B :
+## 13. Minimum Number of Insertion and Deletion to convert  String A to String B :(Parent LCS)
 ```
 ```
-## 14. Longest Palindromic Subsequence :
+## 14. Longest Palindromic Subsequence :(Parent LCS)
 ```
 ```
 ## 15. Printing Shortest Common SuperSequence :
