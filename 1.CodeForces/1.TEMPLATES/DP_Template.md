@@ -1,9 +1,8 @@
 # My DP Templates
 
 ```
-vector<vector<long long int>> dp(n+1,vector<long long int>(sum+1));
-is Faster than 
-
+vector<vector<long long int>> dp(n+1,vector<long long int>(m+1));
+is Faster than arr[n+1][m+1]
 ```
 ## 1. Bounded Knapsack OR 0/1 Knapsace
 Returns max Profit,we can make from certain elements(weight[] and value[])till weight of considered elements don't exceed Weight.
@@ -320,8 +319,60 @@ int LCS(string s1,string s2)
 
 ## 10. Printing LCS :
 ```
+string LCSPrint(string s1, string s2)
+{
+  int n = s1.size();
+  int m = s2.size();
+  vector<vector<int>> dp(n + 1, vector<int>(m + 1));
+  for (int i = 0; i < n + 1; i++)
+  {
+    for (int j = 0; j < m + 1; j++)
+    {
+      dp[i][j] = 0;
+    }
+  }
+  for (int i = 1; i < n + 1; i++)
+  {
+    for (int j = 1; j < m + 1; j++)
+    {
+      if (s1[i - 1] == s2[j - 1])
+      {
+        dp[i][j] = 1 + dp[i - 1][j - 1];
+      }
+      else
+      {
+        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+      }
+    }
+  }
+  int i = n;
+  int j = m;
+  string ans = "";
+  while (i > 0 && j > 0)
+  {
+    if (s1[i - 1] == s2[j - 1])
+    {
+      ans += s1[i - 1];
+      i--;
+      j--;
+    }
+    else
+    {
+      if (dp[i - 1][j] > dp[i][j - 1])
+      {
+        i--;
+      }
+      else
+      {
+        j--;
+      }
+    }
+  }
+  reverse(ans.begin(), ans.end());
+  return ans;
+}
 ```
-## 11. Longest Common SubString :
+## 11. [Longest Common SubString](https://www.geeksforgeeks.org/problems/longest-common-substring1452/1) :(solved)
 ```
 int LCSS(string s1, string s2) {
   int n = s1.size();
