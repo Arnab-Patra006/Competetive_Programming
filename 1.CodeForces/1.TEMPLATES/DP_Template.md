@@ -417,8 +417,18 @@ int minOperations(string str1, string str2) {
   return deletion + insertion;
 }
 ```
-## 14. Longest Palindromic Subsequence :(Parent LCS)
+## 14. [Longest Palindromic Subsequence](https://www.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1)(Parent LCS)
 ```
+int longestPalinSubseq(string s1)
+{
+  string s2 = "";
+  for (int i = s1.size() - 1; i >= 0; i--)
+  {
+    s2 += s1[i];
+  }
+  int lcs = LCS(s1, s2);
+  return lcs;
+}
 ```
 ## 15. Printing Shortest Common SuperSequence :
 ```
