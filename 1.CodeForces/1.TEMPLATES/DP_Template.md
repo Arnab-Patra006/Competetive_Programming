@@ -399,7 +399,7 @@ int LCSS(string s1, string s2) {
   return mx;
 }
 ```
-## 12. Shortest Common SuperSequence (Parent LCS)
+## 12. [Shortest Common SuperSequence](https://www.geeksforgeeks.org/problems/shortest-common-supersequence0322/1) (Parent LCS)
 ```
 int shortestCommonSupersequence(string s1, string s2, int m, int n) {
   int n = s1.size();
@@ -408,8 +408,14 @@ int shortestCommonSupersequence(string s1, string s2, int m, int n) {
   return (n + m - lcs);
 }
 ```
-## 13. Minimum Number of Insertion and Deletion to convert  String A to String B :(Parent LCS)
+## 13. [Minimum Number of Insertion and Deletion to convert  String A to String B](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions-and-insertions0209/1) :(Parent LCS)
 ```
+int minOperations(string str1, string str2) {
+  int lcs = LCS(str1, str2);
+  int deletion = str1.size() - lcs;
+  int insertion = str2.size() - lcs;
+  return deletion + insertion;
+}
 ```
 ## 14. Longest Palindromic Subsequence :(Parent LCS)
 ```
