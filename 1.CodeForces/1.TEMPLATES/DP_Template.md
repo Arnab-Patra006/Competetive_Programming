@@ -430,7 +430,7 @@ int longestPalinSubseq(string s1)
   return lcs;
 }
 ```
-## 15.[Minimum Number of deletion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions4610/1)
+## 15.[Minimum Number of Deletion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions4610/1)
 ```
 int minDeletions(string s1) {
   string s2 = "";
@@ -441,7 +441,10 @@ int minDeletions(string s1) {
   return s1.size() - lcs;
 }
 ```
-## 16. [Printing Shortest Common SuperSequence(SCS)](https://leetcode.com/problems/shortest-common-supersequence/) :(Parent-LCS)
+## 16.[Minimum Number of Insertion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/form-a-palindrome2544/1) 
+```
+```
+## 17. [Printing Shortest Common SuperSequence(SCS)](https://leetcode.com/problems/shortest-common-supersequence/) :(Parent-LCS)
 ```
 string PrintSCS(string s1, string s2) {
 //DO LCS(s1,s2) and have the DP here...
