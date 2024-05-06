@@ -482,7 +482,7 @@ string PrintSCS(string s1, string s2) {
   return ans;
 }
 ```
-## 17. Longest Repeating Subsequence : (LCS)
+## 17. [Longest Repeating Subsequence](https://www.geeksforgeeks.org/problems/longest-repeating-subsequence2004/1) : (LCS)
 ```
 int LongestRepeatingSubsequence(string str) {
   string s1 = str;
@@ -496,8 +496,12 @@ int LongestRepeatingSubsequence(string str) {
   //  ...
 }
 ```
-## 18. Sequence Pattern Matching :(LCS)
+## 18. Sequence Pattern Matching :(Parent-LCS)
+s1="AXY"
+s2="ADXCPY"
+We have to tell whether s1 is a Subsequence of s2 ?(True or False)
 ```
+return s1.length()==LCS(s1,s2); 
 ```
 
 
