@@ -484,6 +484,17 @@ string PrintSCS(string s1, string s2) {
 ```
 ## 17. Longest Repeating Subsequence : (LCS)
 ```
+int LongestRepeatingSubsequence(string str) {
+  string s1 = str;
+  string s2 = str;
+  //Everything same as LCS only diff..
+  //  ...
+  if(s1[i-1]==s2[j-1] && i!=j) //that's all
+  {
+      dp[i][j]=1+dp[i-1][j-1];
+  }
+  //  ...
+}
 ```
 ## 18. Sequence Pattern Matching :(LCS)
 ```
