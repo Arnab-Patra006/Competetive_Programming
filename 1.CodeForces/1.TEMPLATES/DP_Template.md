@@ -430,17 +430,28 @@ int longestPalinSubseq(string s1)
   return lcs;
 }
 ```
-## 15. Printing Shortest Common SuperSequence :
+## 15.[Minimum Number of deletion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions4610/1)
+```
+int minDeletions(string s1) {
+  string s2 = "";
+  for (int i = s1.size() - 1; i >= 0; i--) {
+    s2 += s1[i];
+  }
+  int lcs = LCS(s1, s2);
+  return s1.size() - lcs;
+}
+```
+## 16. [Printing Shortest Common SuperSequence(SCS)](https://leetcode.com/problems/shortest-common-supersequence/) :(Parent-LCS)
 ```
 ```
-## 16. Longest Repeating Subsequence : (LCS)
+## 17. Longest Repeating Subsequence : (LCS)
 ```
 ```
-## 17. Sequence Pattern Matching :
+## 18. Sequence Pattern Matching :(LCS)
 ```
 ```
 
 
-## 18. Matrix Chain Multiplication ;
+## 19. Matrix Chain Multiplication ;
 ```
 ```
