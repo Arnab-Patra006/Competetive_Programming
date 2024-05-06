@@ -401,6 +401,12 @@ int LCSS(string s1, string s2) {
 ```
 ## 12. Shortest Common SuperSequence (Parent LCS)
 ```
+int shortestCommonSupersequence(string s1, string s2, int m, int n) {
+  int n = s1.size();
+  int m = s2.size();
+  int lcs = LCS(s1, s2);
+  return (n + m - lcs);
+}
 ```
 ## 13. Minimum Number of Insertion and Deletion to convert  String A to String B :(Parent LCS)
 ```
