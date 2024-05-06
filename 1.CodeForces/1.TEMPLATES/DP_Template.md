@@ -419,7 +419,7 @@ int minOperations(string str1, string str2) {
 ```
 ## 14. [Longest Palindromic Subsequence](https://www.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1)(Parent LCS)
 ```
-int longestPalinSubseq(string s1)
+int LPS(string s1)
 {
   string s2 = "";
   for (int i = s1.size() - 1; i >= 0; i--)
@@ -443,6 +443,10 @@ int minDeletions(string s1) {
 ```
 ## 16.[Minimum Number of Insertion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/form-a-palindrome2544/1) 
 ```
+int findMinInsertions(string S) {
+  int ans = S.length() - LPS(S);
+  return ans;
+}
 ```
 ## 17. [Printing Shortest Common SuperSequence(SCS)](https://leetcode.com/problems/shortest-common-supersequence/) :(Parent-LCS)
 ```
