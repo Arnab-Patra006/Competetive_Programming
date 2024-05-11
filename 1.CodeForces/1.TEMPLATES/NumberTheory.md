@@ -29,12 +29,21 @@ Q. Why mod 1e9+7?
 + unsigned integer range : 0 to 2^32-1
 ## set/unset bits
 ```
+MSB - Most Significant bit (left most bit)
+LSB - Lowest significant bit. (rightmost bit)
+
++ if any power of 2 - 1 => a number who has binary rep of all '1' except MSB
+eg. 8-1=7 in Binary 1000-0001 => 111=>7
+
 Left Shift 1<<n means 2^n
 1<<0 -> 01 No change =1
 1<<1 -> 10 =2
 1<<2 ->100 =4
 1<<3 ->1000 =8
 Right Shift 1>>i means 2^-n
+
++ n<<i means n*2^i
++ n>>i means n/2^i
 ```
 ```
 + __builtin_popcount(n) for counting set bits in int
@@ -60,7 +69,7 @@ for(int i=10;i>=0;i--)
 {
     cout<<((n>>i)&1);
 }
-cout<<endl;
+cout<<endl;   
 ```
 ## bit manipulation
 ```
