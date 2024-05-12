@@ -280,7 +280,7 @@ void solve(int tc)
 ```
 Best two people are 0 and 2 Who has max common days of 4 days.
 ```
-## Subset Generation : using bitmasking 
+## Subset Generation : using bitmasking  O(n*(2^n)) but 0<n<=31 (int) or 0<n<=63 (long long)
 + Any n size array has 2^n no. of subsets (null included)
 + Let n=3 and Array=[2,4,5]. Possible subsets :
 ```
@@ -325,8 +325,66 @@ vector<vector<int>> subsets(vector<int>& nums)
 2 5 4 
 ```
 
-# ECD using Euclid's Method
+# GCD & LCM using Euclid's Method :
++ a*b=GCD(a,b)*LCM(a,b);
++ __lcm(a,b) ,__gcd(a,b) [in-built fn]
++ GCD : Greatest common divisor
+```
+int GCD(int a,int b)
+{
+    if(b==0)return a;
+    return GCD(b,a%b);
+}
+```
++ LCM : Lowest common Multiple
+```
+int LCM(int a,int b)
+{
+    return (a*b)/GCD(a,b);
+}
+```
+## Find minimum fraction : (gcd)
++ let 12/18 =>2/3. i.e divide them. Now we can easily calculate this fraction.
+divide both of them by their gcd.
+```
+a/gcd(a,b)
+___________
+b/gcd(a,b)
+```
 # Binary Exponentiation :
++ In CP using double or pow() is not that accurate that's why we need Binary Exponentiation.
++ following approach is O(b)
+```
+int a,b;
+cin>>a>>b;
+int t=a;
+for(int i=2;i<=b;i++)
+{
+    t*=a;
+}
+cout<<t<<endl;
+```
++ To optimise this to O(log(b) base 2) we need Binary Exponentiation :
+```
+Let f(a,b)=a^b, Now if b is even =>a^(b/2)*a^(b/2)=>f(a,b/2)*f(a,b/2);
+if b is odd =>a*a^(b/2)*a^(b/2) =>a*f(a,b/2)*f(a,b/2);
+```
++ Recursive
+```
+int binaryExpr(int a,int b)
+{
+    if(b==0) return 1;
+    int res=binaryExpr(a,b/2);
+    if(b&1) //odd power
+    {
+        return (a*((res*1LL*res)%mod))%mod;
+    }
+    else
+    {
+        return (res*1LL*res)%mod;
+    }
+}
+```
 # Prime Nos & Divisors :
 
 sieve
