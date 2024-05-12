@@ -49,53 +49,7 @@ eg. 8-1=7 in Binary 1000-0001 => 111=>7
 ### Counting Setbits :
 + __builtin_popcount(n) for counting set bits in int
 + __builtin_popcountll(n) for counting set bits in long
-+ Manually : counting no. of setbits :
 ```
-int ct=0;
-for(int i=31;i>=0;i--)
-{
-    if((a&(1<<i))!=0)
-    {
-        ct++;
-    }
-}
-return ct;
-```
-+ set i th bit of n: (n | (1<<i))
-+ unset i th bit of n: (n & ~(1<<i))
-+ toggle i th bit of n : (a^(1<<i))
-
-+ Print binary of n :
-```
-for(int i=10;i>=0;i--)
-{
-    cout<<((n>>i)&1);
-}
-cout<<endl;   
-```
-```
-void printBinary(int num)
-{
-    for(int i=10;i>=0;i--)
-    {
-        cout<<((num>>i)&1);
-    }
-    cout<<endl;
-}
-void checkSetBit(int num,int i)
-{
-    i;
-    int mask=(1<<i);
-    if((num & mask)==0)
-    {
-        cout<<"Not Set"<<endl;
-    }
-    else
-    {
-        cout<<"Set"<<endl;
-    }
-    return;
-}
 void setBitCount(int num)
 {
     // cout<<__builtin_popcount(num);
@@ -111,6 +65,37 @@ void setBitCount(int num)
         }
     }
     cout<<cnt<<endl;
+    return;
+}
+```
+### Print binary of n :
+```
+void printBinary(int num)
+{
+    for(int i=10;i>=0;i--)
+    {
+        cout<<((num>>i)&1);
+    }
+    cout<<endl;
+}
+```
+### check set unset
++ set i th bit of n: (n | (1<<i))
++ unset i th bit of n: (n & ~(1<<i))
++ toggle i th bit of n : (a^(1<<i))
+```
+void checkSetBit(int num,int i)
+{
+    i;
+    int mask=(1<<i);
+    if((num & mask)==0)
+    {
+        cout<<"Not Set"<<endl;
+    }
+    else
+    {
+        cout<<"Set"<<endl;
+    }
     return;
 }
 void setBit(int num,int i) //OR
@@ -209,9 +194,32 @@ void solve1(int tc)
     return;
 }
 ```
+## XOR 
++ x^x=0
++ x^0=x
++ x^y^z==x^z^y==y^x^z (Associative -order doesnot matter)
++ swap two nos without using third :
+```
+a=a^b; 
+b=b^a; //b^a^b => b= 0^a=>b=a
+a=a^b; //a^b^a => a= 0^b=>a=b
+```
++ Q. Given an array a of n integers.All integers are present in even count except one.Find that one integer which has odd count in O(N) time complexity and O(1) space?
++ all no in even cnt -a,b,a,b,a,d,d,d,a except d
+a^a^a^a^b^b^d^d^d=>0^d^d^d=>0^d=>d
+```
+int ans=0;
+for(int i=0;i<n;i++)
+{
+    int a;
+    cin>>a;
+    ans=ans^a;
+}
+cout<<ans<<endl;
+```
 
+# bit masking
 
-bit masking
 subset generation
 ```
 # ECD using Euclid's Method
