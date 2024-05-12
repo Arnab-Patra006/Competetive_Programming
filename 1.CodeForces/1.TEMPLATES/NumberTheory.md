@@ -46,7 +46,7 @@ eg. 8-1=7 in Binary 1000-0001 => 111=>7
 + n<<i means n*2^i
 + n>>i means n/2^i
 
-### Counting Setbits :
+### Counting Setbits : O(n)
 + __builtin_popcount(n) for counting set bits in int
 + __builtin_popcountll(n) for counting set bits in long
 ```
@@ -218,18 +218,121 @@ for(int i=0;i<n;i++)
 cout<<ans<<endl;
 ```
 
-# bit masking
-
-subset generation
+# Bit Masking
+## CF Vlog - https://codeforces.com/blog/entry/73558
++ After going through this vlog I am solving a problem mentioned here :
 ```
+void solve(int tc)
+{
+    int n;
+    cin>>n;
+    vi dayMasks(n,0);
+    for(int i=0;i<n;i++)
+    {
+        int m;
+        cin>>m;
+        int dayMask=0;
+        for(int j=0;j<m;j++)
+        {
+            int a;
+            cin>>a;
+            dayMask=(dayMask|(1<<a));
+        }
+        dayMasks[i]=dayMask;
+    }
+    int mxCmnDayOfTwo=0;
+    int people1=-1,people2=-1;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(i==j)continue;
+            int temp=dayMasks[i]&dayMasks[j];
+            temp=__builtin_popcount(temp);
+            if(temp>mxCmnDayOfTwo)
+            {
+                people1=i;
+                people2=j;
+                mxCmnDayOfTwo=temp;
+            }
+        }
+    }
+    cout<<"Best two people are "<<people1<<" and "<<people2<<" Who has max common days of "<<mxCmnDayOfTwo<<" days."<<endl;
+    return;
+}
+```
++ Testcase :
+```
+1
+5
+4 
+1 4 7 9
+6
+2 9 1 7 25 29
+7
+1 23 4 7 9 11 29
+10
+2 28 8 7 9 10 30 21 18 19
+4
+1 11 29 7
+```
++ OutPut :
+```
+Best two people are 0 and 2 Who has max common days of 4 days.
+```
+## Subset Generation : using bitmasking 
++ Any n size array has 2^n no. of subsets (null included)
++ Let n=3 and Array=[2,4,5]. Possible subsets :
+```
+[],[2],[4],[5],[2,4],[4,5],[2,5],[2,4,5]
+```
++ Now for each of these subsets there can be one possible bitmask no. that is btw 0-2^n-1.
+Or I can say each no. from 0-2^n-1 is a representative of a subset.
++ Let it be 101 this means it includes array elements of position 0,2 so subset ->[2,5].
+```
+vector<vector<int>> subsets(vector<int>& nums) 
+{
+    int n=nums.size();
+    vector<vector<int>>subsets;
+    int subset_ct=(1<<n); //total 2^n or (1<<n) subsets
+    for(int mask=0;mask<subset_ct;mask++) //each i represents a subset
+    {
+        vector<int>subset;
+        for(int i=0;i<n;i++)  //checking particuler set bit for a subset
+        {
+            if((mask&(1<<i))!=0) //If the i-th bit is set that means curr subset includes nums[i] 
+            {
+                subset.push_back(nums[i]);
+            }
+        }
+        subsets.push_back(subset);
+    }
+    return subsets;
+}
+```
++ Input :
+```
+3 5 4
+```
++ Output :
+```
+2 
+5 
+2 5 
+4 
+2 4 
+5 4 
+2 5 4 
+```
+
 # ECD using Euclid's Method
 # Binary Exponentiation :
 # Prime Nos & Divisors :
-```
+
 sieve
 Greatest/Lowest common divisor
 Prime Calculation
 Prime Factorization
-```
+
 # Extended Euclidiean Algo : not much Imp
 # Miller Rabin : not much Imp
