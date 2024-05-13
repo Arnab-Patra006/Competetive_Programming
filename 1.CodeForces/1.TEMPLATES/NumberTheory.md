@@ -385,6 +385,20 @@ int binaryExpr(int a,int b)
     }
 }
 ```
++ Iterative :
+```
+int binaryExpItr(int a, int b) {
+  int ans = 1;
+  while (b) {
+    if (b & 1) //If 'b' is odd
+    {
+      a = (a * 1 LL * a) % M;
+      b >>= 1;  //b/=2
+    }
+  }
+  return ans;
+}
+```
 # Prime Nos & Divisors :
 
 sieve
