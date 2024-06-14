@@ -82,4 +82,36 @@ void solve3(int tc)
 ```
 # [3.Coin Combinations I](https://cses.fi/problemset/task/1635)
 ```
+void solve3(int tc)
+{
+    int n,x;
+    cin>>n>>x;
+    vi coins(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>coins[i];
+    }
+    /*
+    state: dp[i]:# of distinct ways to produce money sum i using available coins
+    final sub problem:dp[x]:# of distinct ways to produce money sum x using ava coins
+    transition :dp[i]=sum of all possible i-coins[j]
+    base case:should be i-coins[j]>=0
+    */
+    int dp[x+1];
+    dp[0]=1;
+    for(int i=1;i<=x;i++)
+    {
+        dp[i]=0;
+        for(int j=0;j<n;j++)
+        {
+            if(i-coins[j]>=0)
+            {
+                dp[i]+=dp[i-coins[j]];
+                dp[i]%=mod;
+            }
+        }
+    }
+    cout<<dp[x]<<endl;
+    return;
+}
 ```
