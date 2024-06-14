@@ -1,9 +1,11 @@
 # My DP Templates
 ## General Technique to solve any DP problem :
 ```
-1. State : Clearly define the subproblem.Clearly understand when you are saying dp[i][j],what does i&j represent exaxtly.What are the exact params they are dependent upon.
+1. State : Clearly define the subproblem.
+Clearly understand when you are saying dp[i][j],what does i&j represent exaxtly.
+What are the exact params they are dependent upon.
 
-2. Transition : Define a relation b/w states.Whom it is dependent to?
+2. Transition : Define a relation b/w states.Which states it is dependent to?
 
 3. Base Case : When does my transaction fail?
 
