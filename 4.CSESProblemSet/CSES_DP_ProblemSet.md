@@ -115,3 +115,62 @@ void solve3(int tc)
     return;
 }
 ```
+# [4. Coin Combinations II](https://cses.fi/problemset/task/1636)
+```
+```
+# [5. Grid Paths](https://cses.fi/problemset/task/1638/)
+```
+void solve3(int tc)
+{
+    int n;
+    cin>>n;
+    char grid[n][n];
+    int dp[n][n];
+    /*
+    state : dp[i][j]: # of paths from (0,0) to (i,j)
+    final sub problem : # of paths from (0,0) to (n-1,n-1)
+    transition : dp[i][j]=(dp[i][j-1]+dp[i-1][j]); dependency on left and upper cell.
+    base case : 
+    1. dp[0][0]=1 unless grid[0][0]='*'
+    2. for (TRAP) grid[i][j]='*' make dp[i][j]=0 & dont consider for calculation
+    3. i-1>=0 ,j-1>=0
+    */
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>grid[i][j];
+            if(grid[i][j]=='*')
+            {
+                dp[i][j]=0;
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(i==0 && j==0 && grid[0][0]!='*')
+            {
+                dp[0][0]=1;
+                continue;
+            }
+            if(grid[i][j]=='*')continue;
+            int t=0;
+            if(i-1>=0 && grid[i-1][j]!='*')
+            {
+                t+=dp[i-1][j];
+                t%=mod;
+            }
+            if(j-1>=0 && grid[i][j-1]!='*')
+            {
+                t+=dp[i][j-1];
+                t%=mod;
+            }
+            dp[i][j]=t;
+        }
+    }
+    cout<<dp[n-1][n-1]<<endl;
+    return;
+}
+```
