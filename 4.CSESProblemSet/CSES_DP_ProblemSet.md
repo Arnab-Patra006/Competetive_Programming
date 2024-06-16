@@ -174,3 +174,57 @@ void solve3(int tc)
     return;
 }
 ```
+# [6. Book Shop](https://cses.fi/problemset/task/1158)
+```
+State :
+dp[i][j]=maximum number of pages I can read from 0 to i th book i.e I am allowed to spend j coins.
+
+Transition :
++ Not reading i th book : dp[i][j]=dp[i-1][j] i.e no coins spent.
++ Reading the i th book : dp[i][j]=dp[i-1][j-cost[i-1]]+pages[i-1]
+definitely I will consider maximum among them.
+
+Base Case :
+dp[0][anything]=0
+
+Final sub problem :
+dp[n][x] : maximum number of pages I can read from 1 to n th book i.e I am allowed to spend x coins.
+```
+```
+void solve3(int tc)
+{
+    int n,x;
+    cin>>n>>x;
+    vi cost(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>cost[i];
+    }
+    vi pages(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>pages[i];
+    }
+    vector<vector<int>> dp(n + 1, vector<int>(x + 1, 0));
+    /*
+    By this I already covered if(i==0 || j==0) dp[i][j]=0 
+    */
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=x;j++)
+        {
+            if(j-cost[i-1]>=0)
+            {
+                dp[i][j]=max((pages[i-1]+dp[i-1][j-cost[i-1]]),dp[i-1][j]);
+            }
+            else
+            {
+                dp[i][j]=dp[i-1][j];
+            }
+        }
+    }
+    cout<<dp[n][x]<<endl;
+    return;
+}
+```
++ But here int has to be integer not long long.That's how I resolved runtime error.
