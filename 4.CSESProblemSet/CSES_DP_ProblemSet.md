@@ -228,3 +228,25 @@ void solve3(int tc)
 }
 ```
 + But here int has to be integer not long long.That's how I resolved runtime error.
+# [7. Array Description](https://cses.fi/problemset/task/1746/)
+```
+State :
+dp[i][j]=number of ways to fill the prefix from 0 to ith element such that the ith element is j.
+if(arr[i]!=0 && arr[i]!=j) then dp[i][j]=0. bcz arr[i] predefined & we can't change it.
+
+Transition :
+dp[i][j]=dp[i-1][j]+dp[i-1][j-1]+dp[i-1][j+1]
+bcz for ith element to be j the i-1 th element has to be j,j-1 and j+1
+
+Base Case :
+Initialize :vector<vector<int>> dp(n, vector<int>(m + 1, 0));
++ for 0th element :
+if(arr[i]==0) dp[0][anything]=1
+else dp[i][anything]=0 but dp[i][arr[i]]=1 //bcz only possible element is arr[i] itself.
+
+Final Subproblem :
+dp[n-1][1]+dp[n-1][2]+........dp[n-1][m]
+number of ways to fill n elements i.e that the n-1 element is j where m=1...m for all.
+```
+```
+```
