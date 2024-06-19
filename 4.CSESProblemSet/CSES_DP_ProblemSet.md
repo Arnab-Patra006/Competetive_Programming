@@ -322,3 +322,8 @@ void solve(int tc)
     return;
 }
 ```
+# State Optimization 
++ Ask myself do I need all parameters in the dp state?
++ If I have a dp[a][b][c] and a+b=c do I need to store c as a parameter or I can just compute it on spot?
++ If I can compute a parameter i dp state from other parameters,no need to store it.
++ Which parameters should I remove iif I can? Heighest
