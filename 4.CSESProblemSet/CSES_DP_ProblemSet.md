@@ -249,4 +249,60 @@ dp[n-1][1]+dp[n-1][2]+........dp[n-1][m]
 number of ways to fill n elements i.e that the n-1 element is j where m=1...m for all.
 ```
 ```
+void solve(int tc)
+{
+    int n,m;
+    cin>>n>>m;
+    vi arr(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    vector<vector<int>>dp(n,vector<int>(m+1,0));
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<=m;j++)
+        {
+            if(i==0)
+            {
+                if(arr[i]==0)
+                {
+                    dp[i][j]=1;
+                }
+                else
+                {
+                    dp[i][arr[i]]=1;  //rest are 0 already
+                }
+            }
+        }
+    }
+    for(int i=1;i<n;i++)
+    {
+        if(arr[i]==0)
+        {
+            for(int j=1;j<=m;j++)
+            {
+                dp[i][j]+=dp[i-1][j];
+                if(j-1>0) dp[i][j]+=dp[i-1][j-1];
+                if(j+1<=m) dp[i][j]+=dp[i-1][j+1];
+                dp[i][j]%=mod;
+            }
+        }
+        else
+        {
+            dp[i][arr[i]]+=dp[i-1][arr[i]];
+            if(arr[i]-1>0) dp[i][arr[i]]+=dp[i-1][arr[i]-1];
+            if(arr[i]+1<=m) dp[i][arr[i]]+=dp[i-1][arr[i]+1];
+            dp[i][arr[i]]%=mod;
+        }
+    }
+    int ans=0;
+    for(int j=1;j<=m;j++)
+    {
+        ans+=dp[n-1][j];
+        ans%=mod;
+    }
+    cout<<ans<<endl;
+    return;
+}
 ```
