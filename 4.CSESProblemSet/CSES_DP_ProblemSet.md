@@ -327,3 +327,53 @@ void solve(int tc)
 + If I have a dp[a][b][c] and a+b=c do I need to store c as a parameter or I can just compute it on spot?
 + If I can compute a parameter i dp state from other parameters,no need to store it.
 + Which parameters should I remove iif I can? Heighest
+
+# [12. Money Sums](https://cses.fi/problemset/result/9832348/)
+```
+void show(vi v)
+{
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+    return;
+}
+void solve(int tc)
+{
+    int n;
+    cin>>n;
+    int total=0;
+    vi arr(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        total+=arr[i];
+    }
+    vector<vector<int>>dp(n+1,vector<int>(total+1));
+    sort(arr.begin(),arr.end());
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=total;j++)
+        {
+            if(dp[i-1][j]==1)
+            {
+                dp[i][j]=1;
+                dp[i][j+arr[i-1]]=1;
+            }
+            else if(arr[i-1]==j)
+            {
+                dp[i][j]=1;
+            }
+        }
+    }
+    vi ans;
+    for(int j=1;j<=total;j++)
+    {
+        if(dp[n][j]==1)ans.pb(j);
+    }
+    cout<<ans.size()<<endl;
+    show(ans);
+    return;
+}
+```
