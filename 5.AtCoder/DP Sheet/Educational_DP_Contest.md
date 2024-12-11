@@ -188,3 +188,134 @@ void solve2(int tc)
   return;
 }
 ```
+# [G - Longest Path 1D DAG](https://atcoder.jp/contests/dp/tasks/dp_g)
+```
+vector<int>adj[100005];
+vector<bool>visited(100005,false);
+vector<int>dp(100005,0);
+void helper(int vertex)
+{
+    visited[vertex]=true;
+    dp[vertex]=0;
+    for(auto child:adj[vertex])
+    {
+        if(!visited[child])
+        {
+            helper(child);
+        }
+        dp[vertex]=max(dp[vertex],1+dp[child]);
+    }
+}
+void solve2(int tc)
+{
+    int n,m;
+    cin>>n>>m;
+    for(int i=1;i<=m;i++)
+    {
+        int x,y;
+        cin>>x>>y;
+        adj[x].push_back(y);
+    }
+    for(int i=1;i<=n;i++)
+    {
+        if(!visited[i])
+        {
+            helper(i);
+        }
+    }
+    int ans=0;
+    for(int i=1;i<=n;i++)
+    {
+        ans=max(ans,dp[i]);
+    }
+    cout<<ans;
+    return;
+}
+```
+# [H - Grid 1](https://atcoder.jp/contests/dp/tasks/dp_h)
+```
+void solve2(int tc)
+{
+    int n,m;
+    cin>>n>>m;
+    char grid[n][m];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            cin>>grid[i][j];
+        }
+    }
+    int MOD=1e9+7;
+    int dp[n][m];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            dp[i][j]=0;
+        }
+    }
+    dp[0][0]=1;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            if(grid[i][j]=='.')
+            {
+                if(i-1>=0 && grid[i][j]=='.')
+                {
+                    dp[i][j]+=dp[i-1][j];
+                    dp[i][j]%=MOD;
+                }
+                if(j-1>=0 && grid[i][j]=='.')
+                {
+                    dp[i][j]+=dp[i][j-1];
+                    dp[i][j]%=MOD;
+                }
+            }
+        }
+    }
+    cout<<dp[n-1][m-1]<<endl;
+    return;
+}
+```
+# [I - Coins 2D](https://atcoder.jp/contests/dp/tasks/dp_i)
+```
+void solve2(int tc)
+{
+    int n;
+    cin>>n;
+    vector<double>p;
+    for(int i=0;i<n;i++)
+    {
+        double q;
+        cin>>q;
+        p.push_back(q);
+    }
+    double dp[3000][3000]={0.0};
+    dp[0][0]=1.0;
+    dp[0][1]=0.0;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=0;j<=n;j++)
+        {
+            if(j==0)
+            {
+                dp[i][j]=(1-p[i-1])*dp[i-1][j];
+            }
+            else
+            {
+                dp[i][j]=(p[i-1]*dp[i-1][j-1]+(1-p[i-1])*dp[i-1][j]);
+            }
+        }
+    }
+    double ans=0.0;
+    for(int j=(n/2)+1;j<=n;j++)
+    {
+        ans+=dp[n][j];
+    }
+    cout<<setprecision(10);
+    cout<<ans<<endl;
+    return;
+}
+```
