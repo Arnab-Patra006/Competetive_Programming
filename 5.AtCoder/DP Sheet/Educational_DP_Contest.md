@@ -319,3 +319,161 @@ void solve2(int tc)
     return;
 }
 ```
+# [K - Stones](https://atcoder.jp/contests/dp/tasks/dp_k)
+```
+void solve2(int tc)
+{
+    int n,k;
+    cin>>n>>k;
+    vi arr(n,0);
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    vector<bool>dp(k+1,false);
+    for(int i=1;i<=k;i++)
+    {
+        dp[i]=false;
+        for(int j=0;j<n;j++)
+        {
+            if(i-arr[j]>=0 && dp[i-arr[j]]==false)
+            {
+                dp[i]=true;
+                break;
+            }
+        }
+    }
+    cout<<(dp[k]==true?"First":"Second")<<endl;
+    return;
+}
+```
+# [L - Deque 3D](https://atcoder.jp/contests/dp/tasks/dp_l)
+```
+void solve(int tc)
+{
+    int n,sum=0;
+    cin>>n;
+    vi arr(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        sum+=arr[i];
+    }
+    //dp[l][r][p]=(l....r inclusive)pth player's turn for calculating the value of X
+    int dp[n][n][2];
+    // base cases i.e RminusL=0
+    for(int i=0;i<n;i++)
+    {
+        dp[i][i][0]=arr[i];
+        dp[i][i][1]=0;
+    }
+    //Transitions 
+    for(int RminusL=1;RminusL<n;RminusL++)
+    {
+        for(int l=0;l+RminusL<n;l++)
+        {
+            int r=l+RminusL;
+            dp[l][r][0]=max(arr[l]+dp[l+1][r][1],arr[r]+dp[l][r-1][1]);
+            dp[l][r][1]=min(dp[l+1][r][0],dp[l][r-1][0]);
+        }
+    }
+    //final X
+    int X=dp[0][n-1][0];
+
+    //X+Y=sum of all elements of arr i.e sum X+Y=sum
+    //=>Y=sum-X=>X-Y=X-(sum-X)=>2*X-sum(ans to be found)
+    int ans=2*X-sum;
+    cout<<ans<<endl;
+    return;
+}
+```
+
+# [M - Candies](https://atcoder.jp/contests/dp/tasks/dp_m)
+```
+void solve2(int tc)
+{
+    int n,k;
+    cin>>n>>k;
+    vi arr(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    const int mod=1e9+7;
+    int dp[101][100001];
+    for(int j=0;j<=arr[0];j++)
+    {
+        dp[0][j]=1;
+    }
+    for(int i=1;i<n;i++)
+    {
+        vi prefixSum(k+1);
+        prefixSum[0]=dp[i-1][0];
+        for(int j=1;j<=k;j++)
+        {
+            prefixSum[j]=(prefixSum[j-1]+dp[i-1][j])%mod;
+        }
+        for(int j=0;j<=k;j++)
+        {
+            if(j>arr[i])
+            {
+                dp[i][j]=(prefixSum[j]+mod-prefixSum[j-arr[i]-1])%mod;
+            }
+            else
+            {
+                dp[i][j]=prefixSum[j];
+            }
+        }
+    }
+    cout<<dp[n-1][k]<<endl;
+    return;
+}
+```
+# [N - Slimes](https://atcoder.jp/contests/dp/tasks/dp_n)
+```
+int getPrefixSum(int l,int r,vector<long long>&prefixSum)
+{
+    if(l-1>=0)
+    {
+        return (prefixSum[r]-prefixSum[l-1]);
+    }
+    return prefixSum[r];
+}
+void solve(int tc)
+{
+    int n;
+    cin>>n;
+    vi arr(n,0);
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    
+    vector<long long>prefixSum(n,0);
+    prefixSum[0]=arr[0];
+    long long dp[401][401];
+    for(int i=1;i<n;i++)
+    {
+        prefixSum[i]=arr[i]+prefixSum[i-1];
+        dp[i][i]=0;
+    }
+    for(int width=2;width<=n;width++)
+    {
+        for(int l=0,r=width-1;r<n;l++,r++)
+        {
+            dp[l][r]=LLONG_MAX;
+            for(int x=l;x<r;x++)
+            {
+                dp[l][r]=min(dp[l][r],(dp[l][x]+dp[x+1][r]+getPrefixSum(l,r,prefixSum)));
+            }
+        }
+    }
+    cout<<dp[0][n-1];
+    return;
+}
+```
+
+# Blogs
+```
+https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming
+```
