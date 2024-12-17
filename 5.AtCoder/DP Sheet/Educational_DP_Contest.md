@@ -472,6 +472,57 @@ void solve(int tc)
     return;
 }
 ```
+# [O - Matching](https://atcoder.jp/contests/dp/tasks/dp_o)
+## DP with Bitmasking
+
+```
+This solution uses dynamic programming to count the number of ways to pair men with women based on compatibility. The compatibility matrix is provided as input, where `matrix[i][j]` indicates if a specific man and woman are compatible. The DP state `dp[i][j]` represents the number of ways to pair the first group of men with the women represented by the bitmask `j`. The outer loop goes through the men, the middle loop goes through all possible bitmasks representing available women, and the innermost loop checks if a specific woman is compatible and available. If she is, the DP state is updated accordingly. The final result, `dp[n][maxMusk]`, gives the total number of valid pairings, with the answer taken modulo (10^9 + 7).
+```
+```
+void solve(int tc)
+{
+    int n;
+    cin>>n;
+    int matrix[n+1][n];
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>matrix[i][j];
+        }
+    }
+    int maxMusk=pow(2,n)-1;
+    int dp[n+1][maxMusk+1];
+    const int mod=1e9+7;
+    for(int j=0;j<=maxMusk;j++)
+    {
+        dp[0][j]=0;
+    }
+    dp[0][0]=1;
+    //dp[i][j]=no. of ways to pair first i men with women represented in binary mask j
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=0;j<=maxMusk;j++)
+        {
+            dp[i][j]=0;
+            int ones=__builtin_popcountll(j);
+            if(i==ones)
+            {
+                for(int k=0;k<n;k++)
+                {
+                    if(matrix[i][k] && (j&(1<<k)))
+                    {
+                        dp[i][j]+=dp[i-1][j-(1<<k)];
+                        dp[i][j]%=mod;
+                    }
+                }
+            }
+        }
+    }
+    cout<<dp[n][maxMusk]<<endl;
+    return;
+}
+```
 
 # Blogs
 ```
