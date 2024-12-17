@@ -472,6 +472,53 @@ void solve(int tc)
     return;
 }
 ```
+# [O - Matching](https://atcoder.jp/contests/dp/tasks/dp_o)
+## DP with Bitmasking
+```
+void solve(int tc)
+{
+    int n;
+    cin>>n;
+    int matrix[n+1][n];
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>matrix[i][j];
+        }
+    }
+    int maxMusk=pow(2,n)-1;
+    int dp[n+1][maxMusk+1];
+    const int mod=1e9+7;
+    for(int j=0;j<=maxMusk;j++)
+    {
+        dp[0][j]=0;
+    }
+    dp[0][0]=1;
+    //dp[i][j]=no. of ways to pair first i men with women represented in binary mask j
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=0;j<=maxMusk;j++)
+        {
+            dp[i][j]=0;
+            int ones=__builtin_popcountll(j);
+            if(i==ones)
+            {
+                for(int k=0;k<n;k++)
+                {
+                    if(matrix[i][k] && (j&(1<<k)))
+                    {
+                        dp[i][j]+=dp[i-1][j-(1<<k)];
+                        dp[i][j]%=mod;
+                    }
+                }
+            }
+        }
+    }
+    cout<<dp[n][maxMusk]<<endl;
+    return;
+}
+```
 
 # Blogs
 ```
