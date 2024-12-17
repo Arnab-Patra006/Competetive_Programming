@@ -474,6 +474,10 @@ void solve(int tc)
 ```
 # [O - Matching](https://atcoder.jp/contests/dp/tasks/dp_o)
 ## DP with Bitmasking
+
+```
+This solution uses dynamic programming to count the number of ways to pair men with women based on compatibility. The compatibility matrix is provided as input, where `matrix[i][j]` indicates if a specific man and woman are compatible. The DP state `dp[i][j]` represents the number of ways to pair the first group of men with the women represented by the bitmask `j`. The outer loop goes through the men, the middle loop goes through all possible bitmasks representing available women, and the innermost loop checks if a specific woman is compatible and available. If she is, the DP state is updated accordingly. The final result, `dp[n][maxMusk]`, gives the total number of valid pairings, with the answer taken modulo (10^9 + 7).
+```
 ```
 void solve(int tc)
 {
