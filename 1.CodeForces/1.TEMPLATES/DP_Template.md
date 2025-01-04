@@ -507,4 +507,46 @@ return s1.length()==LCS(s1,s2);
 
 ## 19. Matrix Chain Multiplication ;
 ```
+
+```
+## 20. Palindrome Partitioning : 
+```
+class Solution {
+public:
+    vector<int> dp; // dp[i] = min number of cuts needed from i to n-1
+
+    bool isPalindrome(int i, int j, string &s) {
+        while(i < j) {
+            if(s[i] != s[j]) return false;
+            i++; j--;
+        }
+        return true;
+    }
+
+    int solve(int i, int n, string &s) {
+        if(i == n || isPalindrome(i, n - 1, s)) {
+            return dp[i] = 0;
+        }
+
+        if(dp[i] != -1) return dp[i]; // If already computed
+
+        int ans = INT_MAX;
+        for(int k = i; k < n; k++) {
+            if(isPalindrome(i, k, s)) {
+                int temp = 1 + solve(k + 1, n, s);
+                ans = min(ans, temp);
+            }
+        }
+
+        return dp[i] = ans; // Store the result
+    }
+
+    int minCut(string s) {
+        int n = s.size();
+        dp = vector<int>(n, -1);  // Correctly initialize dp for range 0 to n-1
+
+         solve(0, n, s); // Start solving from 0 to n-1
+         return dp[0];
+    }
+};
 ```

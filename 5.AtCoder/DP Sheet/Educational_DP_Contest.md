@@ -525,6 +525,5 @@ void solve(int tc)
 ```
 
 # Blogs
-```
-https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming
-```
+## [20 patterns to Master DP](https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming) 
+## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
