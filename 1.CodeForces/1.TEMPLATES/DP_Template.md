@@ -1,5 +1,16 @@
 # My DP Templates
+## General Technique to solve any DP problem :
+```
+1. State : Clearly define the subproblem.
+Clearly understand when you are saying dp[i][j],what does i&j represent exaxtly.
+What are the exact params they are dependent upon.
 
+2. Transition : Define a relation b/w states.Which states it is dependent to?
+
+3. Base Case : When does my transaction fail?
+
+4. Final Subproblem : What is the problem demanding me to find? 
+```
 ```
 vector<vector<long long int>> dp(n+1,vector<long long int>(m+1));
 is Faster than arr[n+1][m+1]
@@ -549,6 +560,36 @@ return s1.length()==LCS(s1,s2);
 ## 19. Matrix Chain Multiplication ;
 
 ```
+vector<vector<int>> dp; // DP table
+// Recursive helper function
+int helper(vector<int>& arr, int i, int j) {
+    if (i >= j) return 0; // Base case: no cost for a single matrix
+
+    if (dp[i][j] != INF) return dp[i][j]; // Use memoized value if available
+
+    int mn = INF; // Initialize minimum cost as INF
+
+    // Try all possible partitions
+    for (int k = i; k < j; k++) {
+        int temp = helper(arr, i, k) + helper(arr, k + 1, j) + arr[i - 1] * arr[k] * arr[j];
+        mn = min(mn, temp); // Update minimum cost
+    }
+
+    return dp[i][j] = mn; // Memoize the result
+}
+
+// Solve function
+void solve(int tc) {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++) cin >> arr[i]; // Input the array
+
+    dp.assign(n, vector<int>(n, INF)); // Initialize DP table
+
+    cout << helper(arr, 1, n - 1) << endl; // Solve and output the result
+}
 ```
 
 ## 20. Palindrome Partitioning :
@@ -593,7 +634,6 @@ public:
     }
 };
 ```
-
 ## [Boolean Parenthesization (MCM O^3 Hard)](https://www.geeksforgeeks.org/problems/boolean-parenthesization5610/1)
 
 ```
@@ -668,7 +708,6 @@ int mcm(int i,int j,string &s,bool isTrue)
 }
 int countWays(int n, string &s)
 {
-    // cout<<s<<endl;
     for(int i=0;i<N;i++)
     {
         for(int j=0;j<N;j++)
