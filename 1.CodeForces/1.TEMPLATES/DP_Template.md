@@ -702,4 +702,8 @@ int countWays(int n, string &s)
 [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/description/)
 [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)
 
+### 3. 0/1 Knapsack
+```
+```
+
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
