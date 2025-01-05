@@ -594,11 +594,13 @@ public:
     }
 };
 ```
+
 ## [Boolean Parenthesization (MCM O^3 Hard)](https://www.geeksforgeeks.org/problems/boolean-parenthesization5610/1)
+
 ```
 const static int N=201;
 const static int mOd=1003;
-int dp[N][N][2]; 
+int dp[N][N][2];
 int mcm(int i,int j,string &s,bool isTrue)
 {
     if(i>j)
@@ -683,12 +685,15 @@ int countWays(int n, string &s)
     return dp[0][n-1][true];
 }
 ```
+
 # Blogs
+
 ## [20 patterns to Master DP](https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming)
+
 1. Fibonacci Seq.
-[70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) done
-[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) done
-[746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/) done
+   [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) done
+   [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) done
+   [746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/) done
 2. 2. Kadane's Algorithm
 
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
