@@ -4,8 +4,11 @@
 vector<vector<long long int>> dp(n+1,vector<long long int>(m+1));
 is Faster than arr[n+1][m+1]
 ```
+
 ## 1. Bounded Knapsack OR 0/1 Knapsace
+
 Returns max Profit,we can make from certain elements(weight[] and value[])till weight of considered elements don't exceed Weight.
+
 ```
 int boundedKnapsack01(vector<int> weight, vector<int> val, int Weight)
 {
@@ -40,7 +43,9 @@ int boundedKnapsack01(vector<int> weight, vector<int> val, int Weight)
 ```
 
 ## 2. SubSet Sum
+
 Says whether Its possible to achieve a sum of target from array elements
+
 ```
 bool subsetSum(vector<int> arr, int target)
 {
@@ -79,7 +84,9 @@ bool subsetSum(vector<int> arr, int target)
 ```
 
 ## 3. Equal Sum Partition
+
 We need to tell If it is possible to distribute the array into exactly two parts i.e their sum is equal.
+
 ```
 bool equalSumPartation(vector<int> arr)
 {
@@ -95,14 +102,16 @@ bool equalSumPartation(vector<int> arr)
   // Now see if it's possible to achieve the subset Sum(i.e totalSum/2)from array elements.
   return subsetSum(arr, totalSum / 2);
 }
-``` 
+```
 
 ## 4. Perfect Sum Problem (working)
+
 Count of subsets of having a particuler sum.
+
 ```
-Input: arr[] = {1, 2, 3, 3}, X = 6 
-Output: 3 
-All the possible subsets are {1, 2, 3}, 
+Input: arr[] = {1, 2, 3, 3}, X = 6
+Output: 3
+All the possible subsets are {1, 2, 3},
 {1, 2, 3} and {3, 3}
 ```
 
@@ -151,10 +160,12 @@ int perfectSum(vector<int> arr, int target)
   }
   return dp[n][target];
 }
-``` 
+```
 
 ## 5. Minimum Subset Sum Difference
+
 minimum difference of sum of all elements of the two subsets
+
 ```
 int minSubsetSumDifference(vector<int>arr)
 {
@@ -203,8 +214,10 @@ int minSubsetSumDifference(vector<int>arr)
   int rightSum=totalSum-leftSum;
   return abs(rightSum-leftSum);
 }
-``` 
+```
+
 ## 6. Count Of Partitions with Given Difference :
+
 'Array' and 'diff' given.How many ways we can make 2 subsets whose sum difference is 'diff'.
 Input: N = 5, arr[] = [1, 2, 3, 1, 2], diff = 1
 Output: 5
@@ -219,6 +232,7 @@ rightSum=totalSum-leftSum
 rightSum=leftSum-diff
 leftSum=(diff+totalSum)/2
 so we will basically calculate no of subsets to get leftSum.
+
 ```
 int countPartitions(int n, int d, vector<int> &arr)
 {
@@ -235,13 +249,17 @@ int countPartitions(int n, int d, vector<int> &arr)
   return perfectSum(arr, target);
 }
 ```
-## 7. Target Sum 
-```
+
+## 7. Target Sum
+
 ```
 
+```
 
 ## 8. Unbounded KnapSack (Working)
+
 . We can consider any elements any number of times.(Rod Cutting problem,Coin exchange problem).
+
 ```
 int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
 {
@@ -274,9 +292,11 @@ int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
   return dp[n][Weight];
 }
 ```
+
 ### [i.Rod Cutting (gfg)](https://www.geeksforgeeks.org/problems/rod-cutting0840/1)[solved]
 
 ### [ii.Coin Exchange-1 (gfg)](https://www.geeksforgeeks.org/problems/coin-change2448/1)[solved]
+
 ```
 . Tip1- When only 1 array given it has to be wt[].
 . Tip2- It's a mix of Unkbounded KP and Perfect Sum Problem.Bcz supply in unlimited & want no of ways
@@ -285,6 +305,7 @@ int unboundedKnapsack(vector<int> weight, vector<int> val, int Weight)
 ### [ii.Coin Exchange-2](https://www.geeksforgeeks.org/problems/number-of-coins1824/1)
 
 ## 9. Longest Common Subsequence (LCS) :
+
 ```
 int LCS(string s1,string s2)
 {
@@ -315,9 +336,11 @@ int LCS(string s1,string s2)
   return dp[n][m];
 }
 ```
+
 ### [LCS (gfg)](https://www.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1) [solved]
 
 ## 10. Printing LCS :(Parent LCS)
+
 ```
 string LCSPrint(string s1, string s2)
 {
@@ -372,7 +395,9 @@ string LCSPrint(string s1, string s2)
   return ans;
 }
 ```
-## 11. [Longest Common SubString](https://www.geeksforgeeks.org/problems/longest-common-substring1452/1) :(Parent LCS)(solved) 
+
+## 11. [Longest Common SubString](https://www.geeksforgeeks.org/problems/longest-common-substring1452/1) :(Parent LCS)(solved)
+
 ```
 int LCSS(string s1, string s2) {
   int n = s1.size();
@@ -399,7 +424,9 @@ int LCSS(string s1, string s2) {
   return mx;
 }
 ```
+
 ## 12. [Shortest Common SuperSequence](https://www.geeksforgeeks.org/problems/shortest-common-supersequence0322/1) (Parent LCS)
+
 ```
 int shortestCommonSupersequence(string s1, string s2, int m, int n) {
   int n = s1.size();
@@ -408,7 +435,9 @@ int shortestCommonSupersequence(string s1, string s2, int m, int n) {
   return (n + m - lcs);
 }
 ```
-## 13. [Minimum Number of Insertion and Deletion to convert  String A to String B](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions-and-insertions0209/1) :(Parent LCS)
+
+## 13. [Minimum Number of Insertion and Deletion to convert String A to String B](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions-and-insertions0209/1) :(Parent LCS)
+
 ```
 int minOperations(string str1, string str2) {
   int lcs = LCS(str1, str2);
@@ -417,7 +446,9 @@ int minOperations(string str1, string str2) {
   return deletion + insertion;
 }
 ```
+
 ## 14. [Longest Palindromic Subsequence](https://www.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1)(Parent LCS)
+
 ```
 int LPS(string s1)
 {
@@ -430,7 +461,9 @@ int LPS(string s1)
   return lcs;
 }
 ```
+
 ## 15.[Minimum Number of Deletion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/minimum-number-of-deletions4610/1)
+
 ```
 int minDeletions(string s1) {
   string s2 = "";
@@ -441,14 +474,18 @@ int minDeletions(string s1) {
   return s1.size() - lcs;
 }
 ```
-## 16.[Minimum Number of Insertion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/form-a-palindrome2544/1) 
+
+## 16.[Minimum Number of Insertion in a String to make it Palindrome](https://www.geeksforgeeks.org/problems/form-a-palindrome2544/1)
+
 ```
 int findMinInsertions(string S) {
   int ans = S.length() - LPS(S);
   return ans;
 }
 ```
+
 ## 17. [Printing Shortest Common SuperSequence(SCS)](https://leetcode.com/problems/shortest-common-supersequence/) :(Parent-LCS)
+
 ```
 string PrintSCS(string s1, string s2) {
 //DO LCS(s1,s2) and have the DP here...
@@ -482,7 +519,9 @@ string PrintSCS(string s1, string s2) {
   return ans;
 }
 ```
+
 ## 17. [Longest Repeating Subsequence](https://www.geeksforgeeks.org/problems/longest-repeating-subsequence2004/1) : (LCS)
+
 ```
 int LongestRepeatingSubsequence(string str) {
   string s1 = str;
@@ -496,20 +535,25 @@ int LongestRepeatingSubsequence(string str) {
   //  ...
 }
 ```
+
 ## 18. Sequence Pattern Matching :(Parent-LCS)
+
 s1="AXY"
 s2="ADXCPY"
 We have to tell whether s1 is a Subsequence of s2 ?(True or False)
-```
-return s1.length()==LCS(s1,s2); 
-```
 
+```
+return s1.length()==LCS(s1,s2);
+```
 
 ## 19. Matrix Chain Multiplication ;
+
 ```
 
 ```
-## 20. Palindrome Partitioning : 
+
+## 20. Palindrome Partitioning :
+
 ```
 class Solution {
 public:
@@ -550,3 +594,101 @@ public:
     }
 };
 ```
+## [Boolean Parenthesization (MCM O^3 Hard)](https://www.geeksforgeeks.org/problems/boolean-parenthesization5610/1)
+```
+const static int N=201;
+const static int mOd=1003;
+int dp[N][N][2]; 
+int mcm(int i,int j,string &s,bool isTrue)
+{
+    if(i>j)
+    {
+        return false;
+    }
+    if(i==j)
+    {
+        if(isTrue==true)
+        {
+            // return s[i]=='T';
+            return dp[i][j][isTrue]=(s[i]=='T');
+        }
+        else
+        {
+            // return s[i]=='F';
+            return dp[i][j][isTrue]=(s[i]=='F');
+        }
+    }
+    if(dp[i][j][isTrue]!=-1)
+    {
+        return dp[i][j][isTrue];
+    }
+    int ans=0;
+    for(int k=i+1;k<=j-1;k+=2)
+    {
+        int leftTrue=mcm(i,k-1,s,true)%mOd;
+        int leftFalse=mcm(i,k-1,s,false)%mOd;
+        int rightTrue=mcm(k+1,j,s,true)%mOd;
+        int rightFalse=mcm(k+1,j,s,false)%mOd;
+        if(s[k]=='^')
+        {
+            if(isTrue==true)
+            {
+                ans+=(leftTrue*rightFalse)%mOd+(leftFalse*rightTrue)%mOd;
+            }
+            else
+            {
+                ans+=(leftTrue*rightTrue)%mOd+(leftFalse*rightFalse)%mOd;
+            }
+        }
+        else if(s[k]=='&')
+        {
+            if(isTrue==true)
+            {
+                ans+=(leftTrue*rightTrue)%mOd;
+            }
+            else
+            {
+                ans+=(leftTrue*rightFalse)%mOd+(leftFalse*rightTrue)%mOd+(leftFalse*rightFalse)%mOd;
+            }
+        }
+        else if(s[k]=='|')
+        {
+            if(isTrue==true)
+            {
+                ans+=(leftTrue*rightTrue)%mOd+(leftTrue*rightFalse)%mOd+(leftFalse*rightTrue)%mOd;
+            }
+            else
+            {
+                ans+=(leftFalse*rightFalse)%mOd;
+            }
+        }
+    }
+    return dp[i][j][isTrue]=ans%mOd;
+}
+int countWays(int n, string &s)
+{
+    // cout<<s<<endl;
+    for(int i=0;i<N;i++)
+    {
+        for(int j=0;j<N;j++)
+        {
+            for(int k=0;k<2;k++)
+            {
+                dp[i][j][k]=-1;
+            }
+        }
+    }
+    // return mcm(0,n-1,s,true);
+    mcm(0,n-1,s,true);
+    return dp[0][n-1][true];
+}
+```
+# Blogs
+## [20 patterns to Master DP](https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming)
+1. Fibonacci Seq.
+[70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) done
+[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) done
+[746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/) done
+2. 2. Kadane's Algorithm
+
+## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
