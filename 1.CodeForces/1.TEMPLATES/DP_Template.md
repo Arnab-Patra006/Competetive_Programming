@@ -549,3 +549,149 @@ void solve(int tc) {
     cout << helper(arr, 1, n - 1) << endl; // Solve and output the result
 }
 ```
+## 20. Palindrome Partitioning :
+
+```
+class Solution {
+public:
+    vector<int> dp; // dp[i] = min number of cuts needed from i to n-1
+
+    bool isPalindrome(int i, int j, string &s) {
+        while(i < j) {
+            if(s[i] != s[j]) return false;
+            i++; j--;
+        }
+        return true;
+    }
+
+    int solve(int i, int n, string &s) {
+        if(i == n || isPalindrome(i, n - 1, s)) {
+            return dp[i] = 0;
+        }
+
+        if(dp[i] != -1) return dp[i]; // If already computed
+
+        int ans = INT_MAX;
+        for(int k = i; k < n; k++) {
+            if(isPalindrome(i, k, s)) {
+                int temp = 1 + solve(k + 1, n, s);
+                ans = min(ans, temp);
+            }
+        }
+
+        return dp[i] = ans; // Store the result
+    }
+
+    int minCut(string s) {
+        int n = s.size();
+        dp = vector<int>(n, -1);  // Correctly initialize dp for range 0 to n-1
+
+         solve(0, n, s); // Start solving from 0 to n-1
+         return dp[0];
+    }
+};
+```
+
+## [Boolean Parenthesization (MCM O^3 Hard)](https://www.geeksforgeeks.org/problems/boolean-parenthesization5610/1)
+
+```
+const static int N=201;
+const static int mOd=1003;
+int dp[N][N][2];
+int mcm(int i,int j,string &s,bool isTrue)
+{
+    if(i>j)
+    {
+        return false;
+    }
+    if(i==j)
+    {
+        if(isTrue==true)
+        {
+            // return s[i]=='T';
+            return dp[i][j][isTrue]=(s[i]=='T');
+        }
+        else
+        {
+            // return s[i]=='F';
+            return dp[i][j][isTrue]=(s[i]=='F');
+        }
+    }
+    if(dp[i][j][isTrue]!=-1)
+    {
+        return dp[i][j][isTrue];
+    }
+    int ans=0;
+    for(int k=i+1;k<=j-1;k+=2)
+    {
+        int leftTrue=mcm(i,k-1,s,true)%mOd;
+        int leftFalse=mcm(i,k-1,s,false)%mOd;
+        int rightTrue=mcm(k+1,j,s,true)%mOd;
+        int rightFalse=mcm(k+1,j,s,false)%mOd;
+        if(s[k]=='^')
+        {
+            if(isTrue==true)
+            {
+                ans+=(leftTrue*rightFalse)%mOd+(leftFalse*rightTrue)%mOd;
+            }
+            else
+            {
+                ans+=(leftTrue*rightTrue)%mOd+(leftFalse*rightFalse)%mOd;
+            }
+        }
+        else if(s[k]=='&')
+        {
+            if(isTrue==true)
+            {
+                ans+=(leftTrue*rightTrue)%mOd;
+            }
+            else
+            {
+                ans+=(leftTrue*rightFalse)%mOd+(leftFalse*rightTrue)%mOd+(leftFalse*rightFalse)%mOd;
+            }
+        }
+        else if(s[k]=='|')
+        {
+            if(isTrue==true)
+            {
+                ans+=(leftTrue*rightTrue)%mOd+(leftTrue*rightFalse)%mOd+(leftFalse*rightTrue)%mOd;
+            }
+            else
+            {
+                ans+=(leftFalse*rightFalse)%mOd;
+            }
+        }
+    }
+    return dp[i][j][isTrue]=ans%mOd;
+}
+int countWays(int n, string &s)
+{
+    // cout<<s<<endl;
+    for(int i=0;i<N;i++)
+    {
+        for(int j=0;j<N;j++)
+        {
+            for(int k=0;k<2;k++)
+            {
+                dp[i][j][k]=-1;
+            }
+        }
+    }
+    // return mcm(0,n-1,s,true);
+    mcm(0,n-1,s,true);
+    return dp[0][n-1][true];
+}
+```
+
+# Blogs
+
+## [20 patterns to Master DP](https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming)
+
+1. Fibonacci Seq.
+   [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) done
+   [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) done
+   [746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/) done
+2. 2. Kadane's Algorithm
+
+## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
+
