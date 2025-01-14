@@ -157,6 +157,7 @@ int perfectSum(vector<int> arr, int target)
   }
   for (int i = 1; i < n + 1; i++)
   {
+//j=0 bcz, sum 0 can also be possible more ways e.g arr[i]=0 then this is also a way. 
     for (int j = 0; j < target + 1; j++)
     {
       if (arr[i - 1] <= j)
