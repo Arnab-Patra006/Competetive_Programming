@@ -351,7 +351,7 @@ int LCS(string s1,string s2)
 
 ### [LCS (gfg)](https://www.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1) [solved]
 
-## 10. Printing LCS :(Parent LCS)
+## 10. [Printing LCS :(Parent LCS)](https://www.naukri.com/code360/problems/print-longest-common-subsequence_8416383?leftPanelTabValue=PROBLEM)
 
 ```
 string LCSPrint(string s1, string s2)
