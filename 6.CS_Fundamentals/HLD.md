@@ -5,7 +5,7 @@
 These focus on splitting a monolithic application into smaller, manageable services:
 - **By Business Capability**: Define services based on business functionalities (e.g., Order Service, Payment Service).
 - **By Subdomain**: Use domain-driven design (DDD) to create services for specific subdomains (e.g., Core, Supporting, Generic).
-
+- **Strangler Pattern**
 The **Strangler Pattern** is a method used to migrate from a monolithic application to microservices in a gradual, safe way. It is named after the way a vine slowly overtakes a tree.  
 
 #### Steps to Implement:
