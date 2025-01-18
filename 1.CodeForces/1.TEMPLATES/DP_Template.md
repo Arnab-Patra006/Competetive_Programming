@@ -595,7 +595,7 @@ public:
 };
 ```
 
-## [Boolean Parenthesization (MCM O^3 Hard)](https://www.geeksforgeeks.org/problems/boolean-parenthesization5610/1)
+## 21. [Boolean Parenthesization (MCM O^3 Hard)](https://www.geeksforgeeks.org/problems/boolean-parenthesization5610/1)
 
 ```
 const static int N=201;
