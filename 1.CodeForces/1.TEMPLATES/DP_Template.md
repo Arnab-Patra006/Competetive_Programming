@@ -746,12 +746,42 @@ int maxPathSum(TreeNode * root) {
 
 ### 2. Kadane's Algorithm
 
-[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/) done
-[918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/description/)
-[152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)
+| Problem  | Status |
+| ------------- | ------------- |
+| [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/) | done |
+| [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/description/)|todo|
+| [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)|done|
 
 ### 3. 0/1 Knapsack
-```
-```
+
+| Problem  | Status |
+| ------------- | ------------- |
+|[416. Partition Equal Subset Sum ](https://leetcode.com/problems/partition-equal-subset-sum/description/)|done|
+|[494. Target Sum](https://leetcode.com/problems/target-sum/description/)|todo|
+|[1049. Last Stone Weight II](https://leetcode.com/problems/last-stone-weight-ii/description/)|todo|
+
+### 4. Unbounded Knapsack
+
+| Problem  | Status |
+| ------------- | ------------- |
+|[322. Coin Change](https://leetcode.com/problems/coin-change/description/)|todo|
+|[518. Coin Change II](https://leetcode.com/problems/coin-change-ii/description/)|todo|
+|[279. Perfect Squares](https://leetcode.com/problems/perfect-squares/description/)|todo|
+
+### 5. Longest Common Subsequence (LCS)
+| Problem  | Status |
+| ------------- | ------------- |
+### 6. Longest Increasing Subsequence (LIS)
+| Problem  | Status |
+| ------------- | ------------- |
+### 7. Palindromic Subsequence
+| Problem  | Status |
+| ------------- | ------------- |
+### 8. Edit Distance
+| Problem  | Status |
+| ------------- | ------------- |
+### 9. Subset Sum
+| Problem  | Status |
+| ------------- | ------------- |
 
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
