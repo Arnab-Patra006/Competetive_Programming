@@ -685,6 +685,53 @@ int countWays(int n, string &s)
     return dp[0][n-1][true];
 }
 ```
+## 22. [Diameter of a Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/description/)
+```
+const int N = 200;
+vector < int > visited;
+int ans;
+int helper(TreeNode * root) {
+  if (root == NULL) {
+    return 0;
+  }
+  int left = helper(root -> left);
+  int right = helper(root -> right);
+  int temp = max(left, right);
+  ans = max(ans, temp);
+  ans = max(ans, left + right);
+  return 1 + temp;
+}
+int diameterOfBinaryTree(TreeNode * root) {
+  ans = INT_MIN;
+  helper(root);
+  return ans;
+}
+```
+## 23. [Maximum Path Sum from any Node to Any](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/)
+```
+int ans = INT_MIN;
+int helper(TreeNode * root) {
+  if (root == NULL) {
+    return 0;
+  }
+  ans = max(ans, root -> val);
+  int leftSum = helper(root -> left);
+  int rightSum = helper(root -> right);
+
+  int temp1 = leftSum + rightSum + root -> val;
+  ans = max(ans, temp1);
+  int mx = max(leftSum, rightSum);
+  int temp2 = root -> val + mx;
+  ans = max(ans, temp2);
+  return max(temp2, root -> val);
+}
+int maxPathSum(TreeNode * root) {
+  helper(root);
+  return ans;
+}
+```
+## 24. [Maximum Path Sum from Leaf to Leaf]()
+## 25. [Diameter of N-ary Tree]()
 
 # Blogs
 
