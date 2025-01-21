@@ -738,10 +738,11 @@ int maxPathSum(TreeNode * root) {
 ## [20 patterns to Master DP](https://blog.algomaster.io/p/20-patterns-to-master-dynamic-programming)
 
 ### 1. Fibonacci Seq.
-
-[70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/) done
-[509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) done
-[746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/) done
+| Problem  | Status |
+| ------------- | ------------- |
+| [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)  | Done  |
+| [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/)  | Done |
+| [746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description/) | Done |
 
 ### 2. Kadane's Algorithm
 
