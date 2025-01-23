@@ -757,8 +757,8 @@ int maxPathSum(TreeNode * root) {
 | Problem  | Status |
 | ------------- | ------------- |
 |[416. Partition Equal Subset Sum ](https://leetcode.com/problems/partition-equal-subset-sum/description/)|done|
-|[494. Target Sum](https://leetcode.com/problems/target-sum/description/)|todo|
-|[1049. Last Stone Weight II](https://leetcode.com/problems/last-stone-weight-ii/description/)|todo|
+|[494. Target Sum](https://leetcode.com/problems/target-sum/description/)|done|
+|[1049. Last Stone Weight II](https://leetcode.com/problems/last-stone-weight-ii/description/)|done|
 
 ### 4. Unbounded Knapsack
 
