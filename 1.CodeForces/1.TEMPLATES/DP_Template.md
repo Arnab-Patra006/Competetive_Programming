@@ -764,9 +764,9 @@ int maxPathSum(TreeNode * root) {
 
 | Problem  | Status |
 | ------------- | ------------- |
-|[322. Coin Change (leetcode)](https://leetcode.com/problems/coin-change/description/)|todo|
+|[322. Coin Change (leetcode)](https://leetcode.com/problems/coin-change/description/)|done|
 |[518. Coin Change II](https://leetcode.com/problems/coin-change-ii/description/)|done|
-|[279. Perfect Squares](https://leetcode.com/problems/perfect-squares/description/)|todo|
+|[279. Perfect Squares](https://leetcode.com/problems/perfect-squares/description/)|done|
 
 ### 5. Longest Common Subsequence (LCS)
 | Problem  | Status |
