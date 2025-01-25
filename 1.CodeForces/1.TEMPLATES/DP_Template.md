@@ -771,7 +771,7 @@ int maxPathSum(TreeNode * root) {
 ### 5. Longest Common Subsequence (LCS)
 | Problem  | Status |
 | ------------- | ------------- |
-|[1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/)|todo|
+|[1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/)|done|
 |[583. Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/description/)|todo|
 |[1092. Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/description/)|todo|
 ### 6. Longest Increasing Subsequence (LIS)
@@ -790,12 +790,11 @@ int maxPathSum(TreeNode * root) {
 | Problem  | Status |
 | ------------- | ------------- |
 |[72. Edit Distance](https://leetcode.com/problems/edit-distance/description/)|todo|
-|[583. Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/description/)|todo|
 |[712. Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/description/)|todo|
 ### 9. Subset Sum
 | Problem  | Status |
 | ------------- | ------------- |
-|[416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)|todo|
+|[416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)|done|
 |[698. Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/)|todo|
 
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
