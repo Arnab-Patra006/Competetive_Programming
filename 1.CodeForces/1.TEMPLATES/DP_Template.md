@@ -773,7 +773,7 @@ int maxPathSum(TreeNode * root) {
 | ------------- | ------------- |
 |[1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/)|done|
 |[583. Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/description/)|done|
-|[1092. Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/description/)|todo|
+|[1092. Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/description/)|done|
 ### 6. Longest Increasing Subsequence (LIS)
 | Problem  | Status |
 | ------------- | ------------- |
