@@ -784,7 +784,7 @@ int maxPathSum(TreeNode * root) {
 | Problem  | Status |
 | ------------- | ------------- |
 |[516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/description/)|done|
-|[647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|todo|
+|[647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|done|
 |[1312. Minimum Insertion Steps to Make a String Palindrome](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/description/)|done|
 ### 8. Edit Distance
 | Problem  | Status |
