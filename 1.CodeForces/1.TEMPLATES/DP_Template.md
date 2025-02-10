@@ -790,7 +790,7 @@ int maxPathSum(TreeNode * root) {
 | Problem  | Status |
 | ------------- | ------------- |
 |[72. Edit Distance](https://leetcode.com/problems/edit-distance/description/)|done|
-|[712. Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/description/)|todo|
+|[712. Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/description/)|done|
 ### 9. Subset Sum
 | Problem  | Status |
 | ------------- | ------------- |
