@@ -795,6 +795,12 @@ int maxPathSum(TreeNode * root) {
 | Problem  | Status |
 | ------------- | ------------- |
 |[416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)|done|
-|[698. Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/)|todo|
+|[698. Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/)|done|
+### 14. DP on Grids
+| Problem  | Status |
+| ------------- | ------------- |
+|[62. Unique Paths](https://leetcode.com/problems/unique-paths/description/)|done|
+|[64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/description/)|done|
+|[329. Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/)| done |
 
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
