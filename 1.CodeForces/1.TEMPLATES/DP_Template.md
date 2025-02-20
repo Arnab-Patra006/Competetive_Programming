@@ -806,7 +806,7 @@ int maxPathSum(TreeNode * root) {
 | Problem  | Status |
 | ------------- | ------------- |
 |[337. House Robber III](https://leetcode.com/problems/house-robber-iii/description/)|done|
-|[124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/)|todo|
+|[124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/)|done|
 |[968. Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/description/)| todo |
 
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
