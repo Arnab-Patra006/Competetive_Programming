@@ -808,5 +808,10 @@ int maxPathSum(TreeNode * root) {
 |[337. House Robber III](https://leetcode.com/problems/house-robber-iii/description/)|done|
 |[124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/)|done|
 |[968. Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/description/)| done |
+### 16. DP on Graphs
+| Problem  | Status |
+| ------------- | ------------- |
+|[787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/description/)|todo|
+|[1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)|done|
 
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
