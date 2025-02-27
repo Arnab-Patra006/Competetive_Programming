@@ -814,4 +814,12 @@ int maxPathSum(TreeNode * root) {
 |[787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/description/)|todo|
 |[1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)|done|
 
+### 20. DP+State Machine
+| Problem  | Status |
+| ------------- | ------------- |
+|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|done|
+|[Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)|done|
+|[Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)|done|
+|[309. Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/)|todo|
+
 ## [Some Good DP Problems 1 :](https://leetcode.com/discuss/general-discussion/1050391/Must-do-Dynamic-programming-Problems-Catefory-wise)
