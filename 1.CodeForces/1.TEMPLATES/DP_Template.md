@@ -796,6 +796,33 @@ int maxPathSum(TreeNode * root) {
 | ------------- | ------------- |
 |[416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)|done|
 |[698. Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/)|done|
+
+### 10. String Partition
+| Problem  | Status |
+| ------------- | ------------- |
+|[139. Word Break](https://leetcode.com/problems/word-break/description/)|todo|
+|[132. Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/description/)|todo|
+|[472. Concatenated Words](https://leetcode.com/problems/concatenated-words/description/)|todo|
+
+### 11. Catalan Numbers
+| Problem  | Status |
+| ------------- | ------------- |
+|[96. Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/description/)|todo|
+|[22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)|todo|
+
+### 12. Matrix Chain Multiplication
+| Problem  | Status |
+| ------------- | ------------- |
+|[1039. Minimum Score Triangulation of Polygon](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/description/)|todo|
+|[312. Burst Balloons](https://leetcode.com/problems/burst-balloons/description/)|todo|
+|[1000. Minimum Cost to Merge Stones](https://leetcode.com/problems/minimum-cost-to-merge-stones/description/)|todo|
+
+### 13. Count Distinct Ways
+| Problem  | Status |
+| ------------- | ------------- |
+|[91. Decode Ways](https://leetcode.com/problems/decode-ways/description/)|todo|
+|[2266. Count Number of Texts](https://leetcode.com/problems/count-number-of-texts/description/)|todo|
+
 ### 14. DP on Grids
 | Problem  | Status |
 | ------------- | ------------- |
