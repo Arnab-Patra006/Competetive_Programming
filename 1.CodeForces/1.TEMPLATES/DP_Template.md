@@ -547,9 +547,26 @@ return s1.length()==LCS(s1,s2);
 ```
 
 ## 19. Matrix Chain Multiplication ;
-
++ dp[i][j] represents the minimum cost of multiplying matrices from index i to j in the given matrix chain.
 ```
-
+int solve(vector<int>& arr, int i, int j, vector<vector<int>>& dp) {
+  if (i >= j) return 0;
+  if (dp[i][j] != 0) return dp[i][j];
+  int ans = INT_MAX;
+  for (int k = i; k <= j - 1; k++) {
+    int temp = solve(arr, i, k, dp) + solve(arr, k + 1, j, dp) +
+               (arr[i - 1] * arr[k] * arr[j]);
+    ans = min(ans, temp);
+  }
+  return dp[i][j] = ans;
+}
+int matrixMultiplication(vector<int>& arr) {
+  int n = arr.size();
+  vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
+  return solve(arr, 1, n - 1, dp);
+  // OR
+  // return dp[1][n-1];
+}
 ```
 
 ## 20. Palindrome Partitioning :
