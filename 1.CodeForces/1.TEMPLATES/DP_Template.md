@@ -5,7 +5,7 @@ vector<vector<long long int>> dp(n+1,vector<long long int>(m+1));
 is Faster than arr[n+1][m+1]
 ```
 
-## 1. Bounded Knapsack OR 0/1 Knapsace
+## 1. [Bounded Knapsack OR 0/1 Knapsace](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1)
 
 Returns max Profit,we can make from certain elements(weight[] and value[])till weight of considered elements don't exceed Weight.
 
