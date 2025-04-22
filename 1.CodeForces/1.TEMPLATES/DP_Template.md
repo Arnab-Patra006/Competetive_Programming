@@ -42,7 +42,7 @@ int boundedKnapsack01(vector<int> weight, vector<int> val, int Weight)
 }
 ```
 
-## 2. SubSet Sum
+## 2. [SubSet Sum](https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1)
 
 Says whether Its possible to achieve a sum of target from array elements
 
@@ -83,7 +83,7 @@ bool subsetSum(vector<int> arr, int target)
 }
 ```
 
-## 3. Equal Sum Partition
+## 3. [Equal Sum Partition](https://leetcode.com/problems/partition-equal-subset-sum/description/)
 
 We need to tell If it is possible to distribute the array into exactly two parts i.e their sum is equal.
 
