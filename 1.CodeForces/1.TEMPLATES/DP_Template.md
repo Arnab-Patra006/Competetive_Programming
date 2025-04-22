@@ -162,7 +162,7 @@ int perfectSum(vector<int> arr, int target)
 }
 ```
 
-## 5. Minimum Subset Sum Difference
+## 5. [Minimum Subset Sum Difference](https://www.geeksforgeeks.org/problems/minimum-sum-partition3317/1)
 
 minimum difference of sum of all elements of the two subsets
 
