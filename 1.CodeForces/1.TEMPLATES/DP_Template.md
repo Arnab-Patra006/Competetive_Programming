@@ -104,7 +104,7 @@ bool equalSumPartation(vector<int> arr)
 }
 ```
 
-## 4. Perfect Sum Problem (working)
+## 4. [Perfect Sum Problem (working)](https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1)
 
 Count of subsets of having a particuler sum.
 
