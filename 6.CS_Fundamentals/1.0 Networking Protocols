@@ -1,6 +1,0 @@
-# Networking Protocols
-- Network protocols defines the rules i.e two systems can communicate with each other.
-- 7 layers of protocols:
-Application Layer=>1. Client-Server -HTTP,FTP,Web Sockets,FTP
-                 =>2. Peer to Peer - WebRtc
-
