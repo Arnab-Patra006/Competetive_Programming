@@ -216,7 +216,7 @@ int minSubsetSumDifference(vector<int>arr)
 }
 ```
 
-## 6. Count Of Partitions with Given Difference :
+## 6. [Count Of Partitions with Given Difference](https://www.geeksforgeeks.org/problems/partitions-with-given-difference/0)
 
 'Array' and 'diff' given.How many ways we can make 2 subsets whose sum difference is 'diff'.
 Input: N = 5, arr[] = [1, 2, 3, 1, 2], diff = 1
